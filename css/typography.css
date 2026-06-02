@@ -253,37 +253,45 @@ p {
    ------------------------------------------------------------ */
 @media (max-width: 767px) {
   .type-display {
-    font-size: var(--type-display-mobile);
+    font-size: 2.5rem; /* 40px */
   }
 
   .type-h1,
   .section-title {
-    font-size: var(--type-h1-mobile);
+    font-size: 1.375rem; /* 22px */
     max-width: 100%;
   }
 
   .type-lead,
   .presentacion-lead {
-    font-size: var(--type-lead-mobile);
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.65;
   }
 
   .type-body,
   .presentacion-body,
   .docente-descripcion {
-    font-size: var(--type-body-mobile);
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.65;
   }
 
   .section-subtitle {
-    font-size: var(--type-body-mobile);
+    font-size: 0.9375rem;
     max-width: 100%;
+    line-height: 1.65;
   }
 
   .cita-texto {
-    font-size: var(--type-cita-mobile);
+    font-size: 1.125rem; /* 18px */
   }
 
   .bolilla-title-text {
-    font-size: var(--type-body-mobile);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  .docente-nombre {
+    font-size: 1.25rem; /* 20px */
   }
 }
 

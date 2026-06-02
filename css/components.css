@@ -36,6 +36,10 @@ body.nav-dark .nav-links a {
   align-items: center;
   gap: 0.25rem;
   transition: opacity var(--transition-fast);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 65%;
 }
 
 .nav-brand:hover {
