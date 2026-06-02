@@ -80,9 +80,9 @@
   background:
     linear-gradient(
       to bottom,
-      rgba(5, 5, 5, 0.45) 0%,
-      rgba(5, 5, 5, 0.55) 45%,
-      rgba(5, 5, 5, 0.72) 100%
+      rgba(5, 5, 5, 0.58) 0%,
+      rgba(5, 5, 5, 0.62) 45%,
+      rgba(5, 5, 5, 0.80) 100%
     );
 }
 
