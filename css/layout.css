@@ -298,9 +298,10 @@
 }
 
 .footer-escudo {
-  width: auto;
-  height: 38px;
-  opacity: 0.8;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  opacity: 0.85;
 }
 
 .footer-center {
