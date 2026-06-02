@@ -266,42 +266,6 @@ body.nav-dark .nav-menu-toggle {
 }
 
 /* ============================================================
-   LOGO INSTITUCIONAL EN HERO
-   ============================================================ */
-
-.hero-logo-institucional {
-  position: absolute;
-  bottom: 28px;
-  right: var(--content-margin);
-  z-index: 5;
-}
-
-.hero-logo-institucional img {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  opacity: 0.55;
-  transition: opacity var(--transition-mid);
-  /* El logo tiene fondo negro — lo mezclamos con la foto */
-  mix-blend-mode: screen;
-}
-
-.hero-logo-institucional img:hover {
-  opacity: 0.85;
-}
-
-@media (max-width: 767px) {
-  .hero-logo-institucional {
-    bottom: 20px;
-    right: var(--content-pad-mobile);
-  }
-  .hero-logo-institucional img {
-    width: 48px;
-    height: 48px;
-  }
-}
-
-/* ============================================================
    ICONOS SOCIALES — Nav y footer
    ============================================================ */
 
