@@ -266,6 +266,39 @@ body.nav-dark .nav-menu-toggle {
 }
 
 /* ============================================================
+   ICONOS SOCIALES — Nav y footer
+   ============================================================ */
+
+.nav-ig-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  display: block;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-social a {
+  display: flex;
+  align-items: center;
+  opacity: 0.75;
+}
+
+.nav-social a:hover {
+  opacity: 1;
+}
+
+.footer-ig {
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+  transition: opacity var(--transition-fast);
+}
+
+.footer-ig:hover {
+  opacity: 1;
+}
+
+/* ============================================================
    COMPONENTE 04 — ENTRADA DE BOLILLA
    ============================================================ */
 
