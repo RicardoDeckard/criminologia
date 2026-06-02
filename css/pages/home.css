@@ -1,0 +1,84 @@
+/* ============================================================
+   HOME.CSS — Estilos específicos de la página de inicio
+   Criminología · Cátedra De Luca · UBA
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   SECCIÓN PRESENTACIÓN
+   ------------------------------------------------------------ */
+.section-presentacion .content-area {
+  position: relative;
+}
+
+.presentacion-text {
+  max-width: 40rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ------------------------------------------------------------
+   SECCIÓN PROGRAMA — watermark histórico (opcional)
+   ------------------------------------------------------------ */
+.section-programa .section-title {
+  margin-bottom: 0;
+}
+
+.section-programa .section-subtitle {
+  margin-top: var(--space-sm);
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------
+   SECCIÓN CITA
+   ------------------------------------------------------------ */
+.section-cita .content-area {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* ------------------------------------------------------------
+   SECCIÓN DOCENTES — tipográfica pura
+   ------------------------------------------------------------ */
+.docente-info .text-link {
+  display: inline-flex;
+  margin-top: var(--space-md);
+}
+
+/* ------------------------------------------------------------
+   SECCIÓN CIERRE — Facultad exterior nocturna
+   La imagen tiene mucho contraste propio (negro del cielo,
+   luz artificial cálida). La transición hacia el footer
+   negro es suave y natural.
+   ------------------------------------------------------------ */
+.section-cierre {
+  position: relative;
+}
+
+.section-cierre::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, transparent, var(--color-footer));
+  pointer-events: none;
+}
+
+/* ------------------------------------------------------------
+   RESPONSIVE — Tablet
+   ------------------------------------------------------------ */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .section-cita .content-area {
+    justify-content: flex-start;
+  }
+}
+
+/* ------------------------------------------------------------
+   RESPONSIVE — Móvil
+   ------------------------------------------------------------ */
+@media (max-width: 767px) {
+  .section-cita .content-area {
+    justify-content: flex-start;
+  }
+}

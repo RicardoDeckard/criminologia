@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://catedra-de-luca.github.io/criminologia/sitemap.xml

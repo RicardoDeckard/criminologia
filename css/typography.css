@@ -1,0 +1,307 @@
+/* ============================================================
+   TYPOGRAPHY.CSS — Sistema tipográfico completo
+   Criminología · Cátedra De Luca · UBA
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   ESTILOS DE TEXTO GLOBALES
+   ------------------------------------------------------------ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  color: var(--color-negro);
+}
+
+p {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: var(--leading-loose);
+  color: var(--color-negro);
+}
+
+/* ------------------------------------------------------------
+   ESCALA TIPOGRÁFICA — Niveles
+   ------------------------------------------------------------ */
+
+/* Nivel 0 — Display: titular hero */
+.type-display {
+  font-family: var(--font-serif);
+  font-size: var(--type-display);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+}
+
+/* Nivel 1 — H1: títulos de sección */
+.type-h1,
+.section-title {
+  font-family: var(--font-serif);
+  font-size: var(--type-h1);
+  font-weight: 400;
+  line-height: 1.2;
+  max-width: 36.25rem; /* 580px */
+}
+
+/* Nivel 2 — H2: subtítulos, nombres */
+.type-h2,
+.docente-nombre {
+  font-family: var(--font-serif);
+  font-size: var(--type-h2);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Nivel 3 — Lead: párrafo de apertura */
+.type-lead,
+.presentacion-lead {
+  font-family: var(--font-serif);
+  font-size: var(--type-lead);
+  font-weight: 400;
+  line-height: var(--leading-loose);
+}
+
+/* Nivel 4 — Body: cuerpo de texto */
+.type-body,
+.presentacion-body,
+.docente-descripcion {
+  font-family: var(--font-serif);
+  font-size: var(--type-body);
+  font-weight: 400;
+  line-height: var(--leading-loose);
+}
+
+/* Subtítulo de sección — Garamond itálica */
+.section-subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--type-body);
+  font-weight: 400;
+  line-height: var(--leading-loose);
+  color: var(--color-negro);
+  max-width: 32.5rem; /* 520px */
+  margin-top: var(--space-sm);
+}
+
+/* ------------------------------------------------------------
+   ETIQUETA DE SISTEMA — Inter exclusivo
+   ------------------------------------------------------------ */
+.system-label {
+  font-family: var(--font-sans);
+  font-size: var(--type-label);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-gris);
+  line-height: 1.8;
+  font-style: normal;
+}
+
+/* Variante dorada — para títulos de bolilla y elementos de acento */
+.system-label-gold {
+  font-family: var(--font-sans);
+  font-size: var(--type-label);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-dorado);
+  line-height: 1.8;
+}
+
+/* ------------------------------------------------------------
+   CITA EDITORIAL
+   ------------------------------------------------------------ */
+.cita-texto {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--type-cita);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-negro);
+  quotes: none;
+}
+
+.cita-atribucion {
+  font-family: var(--font-sans);
+  font-size: var(--type-label);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-gris);
+  margin-top: var(--space-md);
+  display: block;
+  text-align: right;
+}
+
+.cita-atribucion cite {
+  font-style: normal;
+}
+
+.cita-atribucion em {
+  font-style: italic;
+  font-family: var(--font-serif);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.8125rem;
+}
+
+/* ------------------------------------------------------------
+   ENLACES TIPOGRÁFICOS
+   ------------------------------------------------------------ */
+.text-link {
+  font-family: var(--font-sans);
+  font-size: var(--type-label);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-dorado);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  transition: opacity var(--transition-fast);
+  margin-top: var(--space-lg);
+}
+
+.text-link:hover {
+  opacity: 0.7;
+}
+
+.text-link:focus-visible {
+  outline: 2px solid var(--color-dorado);
+  outline-offset: 3px;
+}
+
+/* ------------------------------------------------------------
+   NÚMEROS DE BOLILLA
+   ------------------------------------------------------------ */
+.bolilla-num {
+  font-family: var(--font-serif);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--color-dorado);
+  flex-shrink: 0;
+  min-width: 3rem;
+  padding-top: 0.15em;
+}
+
+.bolilla-title-text {
+  font-family: var(--font-serif);
+  font-size: var(--type-body);
+  font-weight: 400;
+  color: var(--color-negro);
+  line-height: var(--leading-normal);
+  transition: font-style var(--transition-fast);
+}
+
+/* ------------------------------------------------------------
+   LABEL DE SECCIÓN SUPERIOR
+   ------------------------------------------------------------ */
+.section-label-top {
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+/* ------------------------------------------------------------
+   CARGO DE DOCENTE
+   ------------------------------------------------------------ */
+.docente-cargo {
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-md);
+  color: var(--color-gris);
+}
+
+/* ------------------------------------------------------------
+   FOOTER — Tipografía
+   ------------------------------------------------------------ */
+.footer-institution {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.875rem;
+  color: var(--color-footer-texto);
+  opacity: 0.6;
+}
+
+.footer-copyright {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--color-footer-texto);
+  opacity: 0.35;
+  margin-top: 0.25rem;
+}
+
+.footer-nav a {
+  font-family: var(--font-sans);
+  font-size: var(--type-label);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-footer-texto);
+  opacity: 0.5;
+  transition: opacity var(--transition-fast);
+}
+
+.footer-nav a:hover {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------
+   TIPOGRAFÍA RESPONSIVE — Móvil
+   ------------------------------------------------------------ */
+@media (max-width: 767px) {
+  .type-display {
+    font-size: var(--type-display-mobile);
+  }
+
+  .type-h1,
+  .section-title {
+    font-size: var(--type-h1-mobile);
+    max-width: 100%;
+  }
+
+  .type-lead,
+  .presentacion-lead {
+    font-size: var(--type-lead-mobile);
+  }
+
+  .type-body,
+  .presentacion-body,
+  .docente-descripcion {
+    font-size: var(--type-body-mobile);
+  }
+
+  .section-subtitle {
+    font-size: var(--type-body-mobile);
+    max-width: 100%;
+  }
+
+  .cita-texto {
+    font-size: var(--type-cita-mobile);
+  }
+
+  .bolilla-title-text {
+    font-size: var(--type-body-mobile);
+  }
+}
+
+/* ------------------------------------------------------------
+   TIPOGRAFÍA RESPONSIVE — Tablet
+   ------------------------------------------------------------ */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .type-display {
+    font-size: 3.5rem; /* 56px */
+  }
+
+  .type-h1,
+  .section-title {
+    font-size: 2.25rem; /* 36px */
+  }
+
+  .type-lead,
+  .presentacion-lead {
+    font-size: 1.25rem; /* 20px */
+  }
+}

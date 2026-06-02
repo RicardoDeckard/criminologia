@@ -1,0 +1,477 @@
+/* ============================================================
+   COMPONENTS.CSS — Componentes reutilizables
+   Criminología · Cátedra De Luca · UBA
+   ============================================================ */
+
+/* ============================================================
+   COMPONENTE 01 — NAVEGACIÓN GLOBAL
+   ============================================================ */
+
+/* Estado base — sobre hero oscuro (página de inicio) */
+.nav-global {
+  background: transparent;
+  transition: background var(--transition-slow);
+}
+
+/* Texto claro — sobre hero con imagen */
+body.nav-light .nav-brand,
+body.nav-light .nav-links a {
+  color: var(--color-papel);
+}
+
+/* Texto oscuro — páginas interiores */
+body.nav-dark .nav-brand,
+body.nav-dark .nav-links a {
+  color: var(--color-negro);
+}
+
+/* Nombre de la cátedra */
+.nav-brand {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-brand:hover {
+  opacity: 0.75;
+}
+
+.nav-dot {
+  color: var(--color-dorado);
+}
+
+/* Links de navegación */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity var(--transition-fast), font-style var(--transition-fast);
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+/* Estado activo — itálica en lugar de color */
+.nav-links a.nav-active {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.6875rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+/* Botón menú móvil — oculto en desktop */
+.nav-menu-toggle {
+  display: none;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: inherit;
+  padding: 0.25rem;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-menu-toggle:hover {
+  opacity: 0.6;
+}
+
+body.nav-light .nav-menu-toggle {
+  color: var(--color-papel);
+}
+
+body.nav-dark .nav-menu-toggle {
+  color: var(--color-negro);
+}
+
+/* Estado scrolled — nombre desaparece */
+.nav-global.is-scrolled .nav-brand {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ============================================================
+   COMPONENTE 02 — MENÚ MÓVIL OVERLAY
+   ============================================================ */
+.nav-mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: var(--color-papel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-slow);
+}
+
+.nav-mobile-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav-mobile-inner {
+  width: 100%;
+  padding: var(--space-xl) var(--content-pad-mobile);
+  position: relative;
+}
+
+.nav-mobile-close {
+  position: absolute;
+  top: -2rem;
+  right: var(--content-pad-mobile);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-negro);
+  opacity: 0.5;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-mobile-close:hover {
+  opacity: 1;
+}
+
+.nav-mobile-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.nav-mobile-links a {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-negro);
+  text-decoration: none;
+  transition: opacity var(--transition-fast), font-style var(--transition-fast);
+  display: block;
+}
+
+.nav-mobile-links a:hover {
+  font-style: italic;
+}
+
+/* ============================================================
+   COMPONENTE 03 — HERO
+   ============================================================ */
+
+/* Etiqueta del hero */
+.hero-label {
+  display: block;
+  color: var(--color-papel);
+  opacity: 0.75;
+  margin-bottom: 1.5rem;
+}
+
+/* Título del hero */
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: var(--type-display);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+  color: var(--color-papel);
+  margin-bottom: var(--space-lg);
+  max-width: 12ch;
+}
+
+/* Subtítulo del hero */
+.hero-subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-papel);
+  opacity: 0.88;
+  max-width: 32.5rem;
+}
+
+/* Línea indicadora de scroll */
+.hero-scroll-line {
+  display: block;
+  width: 1px;
+  height: 36px;
+  background-color: var(--color-dorado);
+  animation: scroll-breathe 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes scroll-breathe {
+  0%   { height: 36px; opacity: 1; }
+  50%  { height: 52px; opacity: 0.7; }
+  100% { height: 36px; opacity: 1; }
+}
+
+/* Animación de entrada del hero — inicial oculto */
+.hero-label,
+.hero-title,
+.hero-subtitle {
+  opacity: 0;
+  animation: hero-fadein var(--transition-slow) ease forwards;
+}
+
+.hero-label    { animation-delay: 150ms; }
+.hero-title    { animation-delay: 350ms; animation-duration: 500ms; }
+.hero-subtitle { animation-delay: 700ms; }
+
+@keyframes hero-fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Ajuste: hero-subtitle tiene su propia opacidad final */
+.hero-subtitle {
+  animation-name: hero-fadein-subtitle;
+}
+
+@keyframes hero-fadein-subtitle {
+  from { opacity: 0; }
+  to   { opacity: 0.88; }
+}
+
+/* Hero label tiene su propia opacidad final */
+.hero-label {
+  animation-name: hero-fadein-label;
+}
+
+@keyframes hero-fadein-label {
+  from { opacity: 0; }
+  to   { opacity: 0.75; }
+}
+
+.hero-scroll-indicator {
+  animation: hero-fadein 300ms ease 1000ms forwards;
+  opacity: 0;
+}
+
+/* ============================================================
+   COMPONENTE 04 — ENTRADA DE BOLILLA
+   ============================================================ */
+
+/* Los estilos base están en layout.css (estructura) y typography.css (tipo).
+   Aquí van los estados interactivos. */
+
+.bolilla-link {
+  border-radius: 0;
+}
+
+.bolilla-link:focus-visible {
+  outline: 2px solid var(--color-dorado);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   COMPONENTE 05 — SECCIÓN PROGRAMA (índice + watermark)
+   ============================================================ */
+
+.section-programa {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-programa::before {
+  content: '';
+  position: absolute;
+  right: -2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 480px;
+  height: 480px;
+  background-image: url('../img/editorial/mapa-historico.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-programa > .content-area {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   COMPONENTE 06 — CITA EDITORIAL
+   ============================================================ */
+
+.cita-bloque {
+  border: none;
+  margin: 0;
+}
+
+/* ============================================================
+   COMPONENTE 07 — DOCENTE — layout tipográfico puro
+   ============================================================ */
+
+.docente-nombre {
+  color: var(--color-negro);
+  margin-bottom: 0.5rem;
+}
+
+.docente-descripcion {
+  max-width: 32.5rem;
+  margin-bottom: 0;
+}
+
+/* Línea decorativa dorada antes del nombre — marca de autor */
+.docente-identificacion::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background-color: var(--color-dorado);
+  margin-bottom: 1.25rem;
+}
+
+/* ============================================================
+   COMPONENTE 08 — FOOTER GLOBAL
+   ============================================================ */
+
+/* Escudo institucional */
+.footer-escudo {
+  display: block;
+  width: auto;
+  height: 38px;
+  opacity: 0.75;
+  transition: opacity var(--transition-fast);
+}
+
+.footer-escudo:hover {
+  opacity: 1;
+}
+
+/* ============================================================
+   COMPONENTE 09 — SEPARADOR
+   ============================================================ */
+
+/* Ya definido en layout.css */
+
+/* ============================================================
+   COMPONENTE 10 — SISTEMA DE ESTADOS DE NAV
+   ============================================================ */
+
+/* Página activa — aplicar al <li> o <a> correspondiente */
+.nav-links .current-page {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.6875rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+
+/* ============================================================
+   ESTADOS FOCUS GLOBAL
+   ============================================================ */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-dorado);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   RESPONSIVE COMPONENTS
+   ============================================================ */
+
+@media (max-width: 767px) {
+  /* Ocultar links de nav en móvil */
+  .nav-links {
+    display: none;
+  }
+
+  /* Mostrar botón de menú */
+  .nav-menu-toggle {
+    display: block;
+  }
+
+  /* Ajuste hero */
+  .hero-title {
+    font-size: var(--type-display-mobile);
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-subtitle {
+    font-size: 1.0625rem;
+    max-width: 100%;
+  }
+
+  /* Animación reducida en móvil para performance */
+  .section-programa::before {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .nav-inner {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* ============================================================
+   UTILITARIOS
+   ============================================================ */
+
+/* Texto oculto visualmente pero accesible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Desactivar animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+  .hero-label,
+  .hero-title,
+  .hero-subtitle,
+  .hero-scroll-indicator {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
+  .hero-subtitle {
+    opacity: 0.88 !important;
+  }
+
+  .hero-label {
+    opacity: 0.75 !important;
+  }
+
+  .hero-scroll-line {
+    animation: none !important;
+  }
+}

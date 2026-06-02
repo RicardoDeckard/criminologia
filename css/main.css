@@ -1,0 +1,169 @@
+/* ============================================================
+   MAIN.CSS — Variables globales, reset, estilos base
+   Criminología · Cátedra De Luca · UBA
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   IMPORTACIONES
+   ------------------------------------------------------------ */
+@import url('typography.css');
+@import url('layout.css');
+@import url('components.css');
+
+/* ------------------------------------------------------------
+   VARIABLES GLOBALES
+   ------------------------------------------------------------ */
+:root {
+  /* Paleta de color */
+  --color-papel:        #F7F4EE;
+  --color-negro:        #0A0A0A;
+  --color-dorado:       #B89A52;
+  --color-gris:         #8A8880;
+  --color-gris-claro:   #D4C9B0;
+  --color-footer:       #0A0A0A;
+  --color-footer-texto: #F7F4EE;
+
+  /* Tipografía */
+  --font-serif:   'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Escala tipográfica */
+  --type-display:    5rem;      /* 80px — titular hero */
+  --type-h1:         2.625rem;  /* 42px — títulos de sección */
+  --type-h2:         1.75rem;   /* 28px — subtítulos, nombres docentes */
+  --type-lead:       1.375rem;  /* 22px — párrafo de apertura */
+  --type-cita:       1.75rem;   /* 28px — cita editorial */
+  --type-body:       1.125rem;  /* 18px — cuerpo de texto */
+  --type-body-sm:    1.0625rem; /* 17px — cuerpo secundario */
+  --type-label:      0.6875rem; /* 11px — etiquetas de sistema */
+
+  /* Escalas móvil */
+  --type-display-mobile:  2.75rem;  /* 44px */
+  --type-h1-mobile:       1.75rem;  /* 28px */
+  --type-lead-mobile:     1.1875rem;/* 19px */
+  --type-cita-mobile:     1.3125rem;/* 21px */
+  --type-body-mobile:     1.0625rem;/* 17px */
+
+  /* Espaciado */
+  --space-xs:   0.5rem;    /* 8px */
+  --space-sm:   1rem;      /* 16px */
+  --space-md:   1.5rem;    /* 24px */
+  --space-lg:   2rem;      /* 32px */
+  --space-xl:   3rem;      /* 48px */
+  --space-2xl:  4rem;      /* 64px */
+  --space-3xl:  5rem;      /* 80px */
+  --space-4xl:  6rem;      /* 96px */
+
+  /* Layout */
+  --content-max:    60rem;      /* 960px */
+  --content-margin: 7.5rem;     /* 120px lateral desktop */
+  --content-pad-mobile: 1.5rem; /* 24px lateral móvil */
+
+  /* Líneas */
+  --line-dorado:    1px solid var(--color-dorado);
+  --line-gris:      0.5px solid var(--color-gris-claro);
+  --line-gris-full: 1px solid var(--color-gris-claro);
+
+  /* Transiciones */
+  --transition-fast:   120ms ease;
+  --transition-mid:    200ms ease;
+  --transition-slow:   300ms ease;
+
+  /* Tracking tipográfico */
+  --tracking-label: 0.14em;
+  --tracking-wide:  0.18em;
+
+  /* Interlineado */
+  --leading-tight:  1.15;
+  --leading-normal: 1.5;
+  --leading-loose:  1.75;
+}
+
+/* ------------------------------------------------------------
+   RESET
+   ------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-papel);
+  color: var(--color-negro);
+  font-family: var(--font-serif);
+  font-size: var(--type-body);
+  line-height: var(--leading-loose);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ------------------------------------------------------------
+   ACCESIBILIDAD — foco visible
+   ------------------------------------------------------------ */
+:focus-visible {
+  outline: 2px solid var(--color-dorado);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Clase para ocultar visualmente pero mantener accesible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ------------------------------------------------------------
+   REDUCCIÓN DE MOVIMIENTO
+   ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

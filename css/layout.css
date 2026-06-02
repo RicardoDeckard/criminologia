@@ -1,0 +1,435 @@
+/* ============================================================
+   LAYOUT.CSS — Grilla, espaciado y estructura
+   Criminología · Cátedra De Luca · UBA
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   ÁREA DE CONTENIDO
+   ------------------------------------------------------------ */
+.content-area {
+  width: 100%;
+  max-width: calc(var(--content-max) + (var(--content-margin) * 2));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--content-margin);
+  padding-right: var(--content-margin);
+}
+
+.content-area--narrow {
+  max-width: calc(40rem + (var(--content-margin) * 2));
+}
+
+/* ------------------------------------------------------------
+   NAVEGACIÓN GLOBAL
+   ------------------------------------------------------------ */
+.nav-global {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.375rem var(--content-margin);
+  position: relative;
+}
+
+.nav-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-dorado);
+}
+
+/* ------------------------------------------------------------
+   HERO — Full viewport
+   La biblioteca tiene luz mixta: zonas cálidas en los
+   gabinetes iluminados a la derecha, zonas más oscuras a la
+   izquierda donde va el texto. El overlay refuerza la zona
+   izquierda con un gradiente lateral además del vertical.
+   ------------------------------------------------------------ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(5, 5, 5, 0.45) 0%,
+      rgba(5, 5, 5, 0.55) 45%,
+      rgba(5, 5, 5, 0.72) 100%
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding-left: var(--content-margin);
+  padding-right: var(--content-margin);
+  padding-bottom: 0;
+  padding-top: 80px;
+}
+
+.hero-scroll-indicator {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: var(--content-margin);
+  padding-bottom: var(--space-xl);
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.hero-scroll-line {
+  display: block;
+  width: 1px;
+  height: 36px;
+  background-color: var(--color-dorado);
+}
+
+/* ------------------------------------------------------------
+   SEPARADOR DE SECCIÓN
+   ------------------------------------------------------------ */
+.section-divider {
+  width: 100%;
+  max-width: calc(var(--content-max) + (var(--content-margin) * 2));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--content-margin);
+  padding-right: var(--content-margin);
+}
+
+.section-divider::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-gris-claro);
+}
+
+/* ------------------------------------------------------------
+   SECCIONES — Espaciado vertical
+   ------------------------------------------------------------ */
+.section-presentacion {
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
+}
+
+.section-programa {
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+}
+
+.section-cita {
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
+}
+
+.section-docentes {
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+}
+
+/* ------------------------------------------------------------
+   PRESENTACIÓN
+   ------------------------------------------------------------ */
+.presentacion-text {
+  max-width: 40rem;
+}
+
+.presentacion-lead {
+  margin-bottom: var(--space-lg);
+}
+
+.presentacion-body {
+  margin-bottom: var(--space-md);
+}
+
+.presentacion-body:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------
+   LISTA DE BOLILLAS
+   ------------------------------------------------------------ */
+.bolillas-list {
+  width: 100%;
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-lg);
+}
+
+.bolilla-entry {
+  border-top: var(--line-gris);
+}
+
+.bolilla-entry:last-child {
+  border-bottom: var(--line-gris);
+}
+
+.bolilla-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+  text-decoration: none;
+  width: 100%;
+}
+
+.bolilla-link:hover .bolilla-title-text {
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------
+   DOCENTES — Layout tipográfico puro (sin fotografías)
+   Dos columnas: identificación izquierda / descripción derecha
+   ------------------------------------------------------------ */
+.docentes-lista {
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-lg);
+}
+
+.docente-entry {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 3rem;
+  align-items: start;
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+}
+
+.docente-identificacion {
+  grid-column: 1;
+}
+
+.docente-info {
+  grid-column: 2;
+  padding-top: 0.2rem;
+}
+
+.docente-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-gris-claro);
+}
+
+/* ------------------------------------------------------------
+   CITA — Layout sangrado
+   ------------------------------------------------------------ */
+.cita-bloque {
+  padding-left: 10rem;
+  padding-right: 4rem;
+  max-width: 56rem;
+}
+
+/* ------------------------------------------------------------
+   IMAGEN DE CIERRE — Facultad exterior nocturna
+   La foto nocturna tiene mucho negro natural y luz cálida
+   artificial. El filtro elimina la saturación sin perder
+   la tensión tonal del original.
+   ------------------------------------------------------------ */
+.section-cierre {
+  width: 100%;
+  overflow: hidden;
+  margin-top: var(--space-3xl);
+}
+
+.cierre-imagen {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+  /* Desaturar parcialmente: sepia muy bajo preserva el dramatismo
+     nocturno sin perder la paleta cálida de la iluminación artificial */
+  filter: grayscale(100%) sepia(15%) contrast(1.05) brightness(0.92);
+}
+
+/* ------------------------------------------------------------
+   FOOTER
+   ------------------------------------------------------------ */
+.footer-global {
+  background-color: var(--color-footer);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-xl);
+  max-width: calc(var(--content-max) + (var(--content-margin) * 2));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--content-margin);
+  padding-right: var(--content-margin);
+}
+
+.footer-escudo {
+  width: auto;
+  height: 38px;
+  opacity: 0.8;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-nav ul {
+  display: flex;
+  gap: var(--space-lg);
+  list-style: none;
+}
+
+/* ============================================================
+   RESPONSIVE — Tablet (768px–1199px)
+   ============================================================ */
+@media (min-width: 768px) and (max-width: 1199px) {
+  :root {
+    --content-margin: 3rem;
+  }
+
+  .docente-entry {
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .cita-bloque {
+    padding-left: 4rem;
+    padding-right: 2rem;
+  }
+
+  .hero-content {
+    padding-left: var(--content-margin);
+    padding-right: var(--content-margin);
+  }
+
+  .hero-scroll-indicator {
+    padding-left: var(--content-margin);
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Móvil (≤767px)
+   ============================================================ */
+@media (max-width: 767px) {
+  :root {
+    --content-margin: var(--content-pad-mobile);
+  }
+
+  .hero-content {
+    padding-left: var(--content-pad-mobile);
+    padding-right: var(--content-pad-mobile);
+    padding-bottom: 12vh;
+    padding-top: calc(64px + 10vh);
+  }
+
+  .hero-scroll-indicator {
+    padding-left: var(--content-pad-mobile);
+    padding-bottom: var(--space-lg);
+  }
+
+  .section-presentacion,
+  .section-programa,
+  .section-cita,
+  .section-docentes {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .presentacion-text {
+    max-width: 100%;
+  }
+
+  .bolillas-list {
+    margin-top: var(--space-xl);
+  }
+
+  .bolilla-link {
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .bolilla-num {
+    min-width: auto;
+  }
+
+  /* Docentes — columna única en móvil */
+  .docente-entry {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .docente-identificacion,
+  .docente-info {
+    grid-column: auto;
+  }
+
+  .cita-bloque {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cita-atribucion {
+    text-align: left;
+  }
+
+  .cierre-imagen {
+    height: 320px;
+    object-position: center 25%;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-md);
+  }
+
+  .footer-left {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-nav ul {
+    justify-content: center;
+  }
+}
