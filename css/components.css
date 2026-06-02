@@ -220,46 +220,9 @@ body.nav-dark .nav-menu-toggle {
   100% { height: 36px; opacity: 1; }
 }
 
-/* Animación de entrada del hero — inicial oculto */
-.hero-label,
-.hero-title,
-.hero-subtitle {
-  opacity: 0;
-  animation: hero-fadein var(--transition-slow) ease forwards;
-}
-
-.hero-label    { animation-delay: 150ms; }
-.hero-title    { animation-delay: 350ms; animation-duration: 500ms; }
-.hero-subtitle { animation-delay: 700ms; }
-
-@keyframes hero-fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-/* Ajuste: hero-subtitle tiene su propia opacidad final */
-.hero-subtitle {
-  animation-name: hero-fadein-subtitle;
-}
-
-@keyframes hero-fadein-subtitle {
-  from { opacity: 0; }
-  to   { opacity: 0.88; }
-}
-
-/* Hero label tiene su propia opacidad final */
-.hero-label {
-  animation-name: hero-fadein-label;
-}
-
-@keyframes hero-fadein-label {
-  from { opacity: 0; }
-  to   { opacity: 0.75; }
-}
-
+/* Sin animación de entrada — texto visible directamente */
 .hero-scroll-indicator {
-  animation: hero-fadein 300ms ease 1000ms forwards;
-  opacity: 0;
+  opacity: 1;
 }
 
 /* ============================================================
