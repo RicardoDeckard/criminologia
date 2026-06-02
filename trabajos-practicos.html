@@ -3,11 +3,550 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trabajos prácticos de Criminología · Cátedra De Luca · Facultad de Derecho UBA. Consignas, reglas de presentación y criterios de evaluación.">
+  <meta name="author" content="Cátedra De Luca · Departamento de Derecho Penal y Criminología · UBA">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://RicardoDeckard.github.io/criminologia/trabajos-practicos.html">
+
+  <meta property="og:title" content="Trabajos Prácticos · Criminología · Cátedra De Luca · UBA">
+  <meta property="og:description" content="Consignas y reglas de presentación para los trabajos prácticos de Criminología, Facultad de Derecho, Universidad de Buenos Aires.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://RicardoDeckard.github.io/criminologia/trabajos-practicos.html">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Criminología · Cátedra De Luca · UBA">
+
+  <title>Trabajos Prácticos · Criminología · Cátedra De Luca · UBA</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    /* ── Cabecera de página interna ── */
+    .page-header {
+      padding-top: calc(80px + var(--space-4xl));
+      padding-bottom: var(--space-3xl);
+      border-bottom: var(--line-gris);
+    }
+
+    .page-header .content-area {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: var(--space-xl);
+    }
+
+    .page-eyebrow {
+      font-family: var(--font-sans);
+      font-size: var(--type-label);
+      font-weight: 500;
+      letter-spacing: var(--tracking-label);
+      text-transform: uppercase;
+      color: var(--color-dorado);
+      display: block;
+      margin-bottom: var(--space-sm);
+    }
+
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: var(--type-h1);
+      font-weight: 400;
+      line-height: var(--leading-tight);
+      color: var(--color-negro);
+    }
+
+    .page-header-meta {
+      font-family: var(--font-sans);
+      font-size: var(--type-label);
+      letter-spacing: var(--tracking-label);
+      text-transform: uppercase;
+      color: var(--color-gris);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    /* ── Sección de reglas generales ── */
+    .section-reglas {
+      padding-top: var(--space-4xl);
+      padding-bottom: var(--space-4xl);
+    }
+
+    .reglas-intro {
+      max-width: 40rem;
+      margin-bottom: var(--space-3xl);
+    }
+
+    .reglas-intro p {
+      margin-bottom: var(--space-md);
+      line-height: var(--leading-loose);
+    }
+
+    .reglas-intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Lista de reglas — una por línea, con separadores */
+    .reglas-lista {
+      list-style: none;
+      border-top: var(--line-gris);
+      margin-bottom: var(--space-3xl);
+    }
+
+    .regla-item {
+      border-bottom: var(--line-gris);
+      padding-top: var(--space-md);
+      padding-bottom: var(--space-md);
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: var(--space-md);
+      align-items: start;
+    }
+
+    .regla-num {
+      font-family: var(--font-sans);
+      font-size: var(--type-label);
+      font-weight: 500;
+      letter-spacing: var(--tracking-label);
+      color: var(--color-dorado);
+      padding-top: 0.35rem;
+    }
+
+    .regla-texto {
+      font-family: var(--font-serif);
+      font-size: var(--type-body);
+      line-height: var(--leading-loose);
+      color: var(--color-negro);
+    }
+
+    .regla-texto a {
+      color: var(--color-negro);
+      border-bottom: 1px solid var(--color-gris-claro);
+      transition: border-color var(--transition-fast);
+    }
+
+    .regla-texto a:hover {
+      border-color: var(--color-dorado);
+    }
+
+    /* ── Sección de consignas ── */
+    .section-consignas {
+      padding-top: var(--space-3xl);
+      padding-bottom: var(--space-4xl);
+      border-top: var(--line-gris);
+    }
+
+    .consignas-header {
+      margin-bottom: var(--space-3xl);
+    }
+
+    .section-label-top {
+      display: block;
+      margin-bottom: var(--space-sm);
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: var(--type-h1);
+      font-weight: 400;
+      line-height: var(--leading-tight);
+    }
+
+    /* Tarjeta de trabajo práctico */
+    .tp-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .tp-entry {
+      border-top: var(--line-gris);
+      padding-top: var(--space-3xl);
+      padding-bottom: var(--space-3xl);
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      gap: var(--space-2xl);
+      align-items: start;
+    }
+
+    .tp-entry:last-child {
+      border-bottom: var(--line-gris);
+    }
+
+    .tp-numero-bloque {
+      padding-top: 0.3rem;
+    }
+
+    .tp-numero {
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: 1;
+      color: var(--color-dorado);
+      display: block;
+    }
+
+    .tp-label {
+      font-family: var(--font-sans);
+      font-size: var(--type-label);
+      font-weight: 500;
+      letter-spacing: var(--tracking-label);
+      text-transform: uppercase;
+      color: var(--color-gris);
+      display: block;
+      margin-top: 0.25rem;
+    }
+
+    .tp-contenido {
+      padding-top: 0;
+    }
+
+    .tp-titulo {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--color-negro);
+      margin-bottom: var(--space-lg);
+      line-height: var(--leading-tight);
+    }
+
+    .tp-consigna {
+      font-family: var(--font-serif);
+      font-size: var(--type-body);
+      line-height: var(--leading-loose);
+      color: var(--color-negro);
+      margin-bottom: var(--space-md);
+      max-width: 38rem;
+    }
+
+    .tp-consigna:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .tp-consigna a {
+      color: var(--color-negro);
+      border-bottom: 1px solid var(--color-gris-claro);
+      transition: border-color var(--transition-fast);
+    }
+
+    .tp-consigna a:hover {
+      border-color: var(--color-dorado);
+    }
+
+    .tp-meta {
+      margin-top: var(--space-lg);
+      padding-top: var(--space-md);
+      border-top: var(--line-gris);
+      display: flex;
+      gap: var(--space-xl);
+    }
+
+    .tp-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .tp-meta-label {
+      font-family: var(--font-sans);
+      font-size: var(--type-label);
+      font-weight: 500;
+      letter-spacing: var(--tracking-label);
+      text-transform: uppercase;
+      color: var(--color-gris);
+    }
+
+    .tp-meta-valor {
+      font-family: var(--font-serif);
+      font-size: var(--type-body-sm);
+      color: var(--color-negro);
+    }
+
+    /* ── Nota sobre calificación ── */
+    .nota-calificacion {
+      margin-top: var(--space-4xl);
+      padding: var(--space-xl) var(--space-2xl);
+      border-left: 1px solid var(--color-dorado);
+      max-width: 40rem;
+    }
+
+    .nota-calificacion p {
+      font-family: var(--font-serif);
+      font-size: var(--type-body-sm);
+      line-height: var(--leading-loose);
+      color: var(--color-negro);
+      margin-bottom: var(--space-sm);
+    }
+
+    .nota-calificacion p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 767px) {
+      .page-header .content-area {
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: var(--space-sm);
+      }
+
+      .page-header-meta {
+        text-align: left;
+      }
+
+      .page-header {
+        padding-top: calc(80px + var(--space-2xl));
+        padding-bottom: var(--space-2xl);
+      }
+
+      .section-reglas,
+      .section-consignas {
+        padding-top: var(--space-2xl);
+        padding-bottom: var(--space-2xl);
+      }
+
+      .regla-item {
+        grid-template-columns: 1.5rem 1fr;
+        gap: var(--space-sm);
+      }
+
+      .tp-entry {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+        padding-top: var(--space-2xl);
+        padding-bottom: var(--space-2xl);
+      }
+
+      .tp-numero-bloque {
+        display: flex;
+        align-items: baseline;
+        gap: var(--space-sm);
+        padding-top: 0;
+      }
+
+      .tp-numero {
+        font-size: 2.5rem;
+      }
+
+      .tp-meta {
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+
+      .nota-calificacion {
+        padding: var(--space-lg) var(--space-lg);
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .tp-entry {
+        grid-template-columns: 6rem 1fr;
+        gap: var(--space-xl);
+      }
+    }
+  </style>
 </head>
+
 <body class="nav-dark">
+
+  <nav class="nav-global" id="nav-global" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        Criminología <span class="nav-dot" aria-hidden="true">·</span> Cátedra De Luca
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="programa.html">Programa</a></li>
+        <li><a href="materiales.html">Materiales</a></li>
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="trabajos-practicos.html">Trabajos Prácticos</a></li>
+        <li><a href="docentes.html">Docentes</a></li>
+        <li class="nav-social">
+          <a href="https://www.instagram.com/criminologia_peres_deluca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la cátedra">
+            <svg class="nav-ig-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <button class="nav-menu-toggle" id="nav-menu-toggle" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="nav-menu-dash" aria-hidden="true">—</span>
+      </button>
+    </div>
+    <div class="nav-line" aria-hidden="true"></div>
+  </nav>
+
+  <div class="nav-mobile-overlay" id="nav-mobile-overlay" aria-hidden="true">
+    <div class="nav-mobile-inner">
+      <button class="nav-mobile-close" id="nav-mobile-close" aria-label="Cerrar menú">
+        <span aria-hidden="true">—</span>
+      </button>
+      <ul class="nav-mobile-links" role="list">
+        <li><a href="programa.html">Programa</a></li>
+        <li><a href="materiales.html">Materiales</a></li>
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="trabajos-practicos.html">Trabajos Prácticos</a></li>
+        <li><a href="docentes.html">Docentes</a></li>
+        <li>
+          <a href="https://www.instagram.com/criminologia_peres_deluca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la cátedra" style="display:flex;align-items:center;gap:10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px;" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+            Instagram
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- CABECERA -->
+    <header class="page-header">
+      <div class="content-area">
+        <div>
+          <span class="page-eyebrow">Criminología · 2026</span>
+          <h1 class="page-title">Trabajos Prácticos</h1>
+        </div>
+        <p class="page-header-meta">Cátedra De Luca<br>Facultad de Derecho · UBA</p>
+      </div>
+    </header>
+
+    <!-- REGLAS GENERALES -->
+    <section class="section-reglas" aria-labelledby="reglas-heading">
+      <div class="content-area">
+
+        <div class="reglas-intro">
+          <h2 id="reglas-heading" class="section-title" style="margin-bottom: var(--space-lg);">Reglas generales</h2>
+          <p>En la primera clase se compartirán indicaciones y recomendaciones acerca de la realización de los trabajos prácticos. El objetivo es evaluar la capacidad —que paulatinamente irán adquiriendo— de poner en práctica los conocimientos adquiridos para analizar la expresión cultural indicada o elegida.</p>
+        </div>
+
+        <ol class="reglas-lista" aria-label="Reglas generales para los trabajos prácticos">
+
+          <li class="regla-item">
+            <span class="regla-num" aria-hidden="true">01</span>
+            <p class="regla-texto">Los trabajos prácticos deberán confeccionarse en formato Word, letra Arial o similar, tamaño 12 a espacio y medio, márgenes preestablecidos, respetando en cada caso la extensión indicada y consignando nombre, apellido y comisión. Evitar carátulas y ornamentos de presentación, salvo que formen parte de la consigna.</p>
+          </li>
+
+          <li class="regla-item">
+            <span class="regla-num" aria-hidden="true">02</span>
+            <p class="regla-texto">Toda copia o transcripción sin la correspondiente cita de fuente será considerada plagio e implicará la desaprobación del trabajo. Se recomienda consultar la <a href="https://drive.google.com/file/d/1aTOwebtBO0XQbLynJKHzCu1p3OL1Wa7l/view?usp=sharing" target="_blank" rel="noopener noreferrer">guía de citas bibliográficas</a>.</p>
+          </li>
+
+          <li class="regla-item">
+            <span class="regla-num" aria-hidden="true">03</span>
+            <p class="regla-texto">Se recomienda aprovechar el espacio disponible para demostrar capacidad de análisis de la expresión cultural, enfocándose en el uso práctico de la teoría aplicada a la expresión propuesta antes que en la descripción o el resumen.</p>
+          </li>
+
+          <li class="regla-item">
+            <span class="regla-num" aria-hidden="true">04</span>
+            <p class="regla-texto">No corresponde presentar trabajos de cursos anteriores, trabajos de elaboración colectiva no autorizada, ni trabajos copiados total o parcialmente de internet. Cualquiera de estos supuestos implicará la imposibilidad de continuar cursando.</p>
+          </li>
+
+          <li class="regla-item">
+            <span class="regla-num" aria-hidden="true">05</span>
+            <p class="regla-texto">Para acceder al recuperatorio de aquellos exámenes que lo prevean —el tercero no se recupera—, no es obligatorio haber presentado la entrega original, aunque se recomienda no desperdiciar la oportunidad.</p>
+          </li>
+
+        </ol>
+
+        <div class="nota-calificacion" role="note" aria-label="Nota sobre calificación">
+          <p>La nota final surgirá del promedio de todos los trabajos prácticos, la realización de los optativos y el concepto obtenido a través de la presencia en clase y la participación.</p>
+          <p>Para quienes el promedio de los tres primeros trabajos arroje una calificación de 5 o menos, el cuarto trabajo práctico se realizará en modalidad oral.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- CONSIGNAS -->
+    <section class="section-consignas" aria-labelledby="consignas-heading">
+      <div class="content-area">
+
+        <div class="consignas-header">
+          <span class="system-label section-label-top">Consignas · 2026</span>
+          <h2 class="section-title" id="consignas-heading">Trabajos del cuatrimestre</h2>
+        </div>
+
+        <div class="tp-lista">
+
+          <!-- TP 1 -->
+          <article class="tp-entry" id="tp-1" aria-label="Trabajo Práctico N° 1">
+            <div class="tp-numero-bloque">
+              <span class="tp-numero" aria-hidden="true">1</span>
+              <span class="tp-label">TP N° 1</span>
+            </div>
+            <div class="tp-contenido">
+              <h3 class="tp-titulo">El nombre de la rosa</h3>
+              <p class="tp-consigna">Vea la <a href="https://www.bing.com/videos/search?q=el+nombre+de+la+rosa+online&docid=603504228667041554&mid=F16867E3BCD07A0ADDFEF16867E3BCD07A0ADDFE&view=detail&FORM=VIRE" target="_blank" rel="noopener noreferrer">película</a> e identifique las características de los discursos legitimantes y críticos del poder punitivo en los diálogos de los personajes y escenas.</p>
+              <p class="tp-consigna">Para ello, tome en cuenta las características de la criminología de los demonólogos en las obras comentadas en clase: <em>Malleus maleficarum</em>, <em>De praestigiis daemonum</em> y <em>Cautio Criminalis</em>, además de <em>La verdad y las formas jurídicas</em> de Foucault e <em>Intelectuales, política y poder</em> de Bourdieu, cuyo correcto uso incrementará la calificación obtenida.</p>
+              <div class="tp-meta">
+                <div class="tp-meta-item">
+                  <span class="tp-meta-label">Extensión</span>
+                  <span class="tp-meta-valor">Dos carillas (una hoja). Una tercera para citas bibliográficas.</span>
+                </div>
+                <div class="tp-meta-item">
+                  <span class="tp-meta-label">Bolilla</span>
+                  <span class="tp-meta-valor">N° 1 — Demonología</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer-global" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img
+          src="img/institucional/logo-footer.png"
+          alt="Facultad de Derecho, Universidad de Buenos Aires"
+          width="72"
+          height="72"
+          loading="lazy"
+          class="footer-escudo">
+      </div>
+      <div class="footer-center">
+        <p class="footer-institution">
+          <em>Facultad de Derecho · Universidad de Buenos Aires</em>
+        </p>
+        <p class="footer-copyright">
+          © 2026 · Cátedra De Luca · Departamento de Derecho Penal y Criminología
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <ul role="list">
+          <li><a href="programa.html">Programa</a></li>
+          <li><a href="docentes.html">Docentes</a></li>
+          <li><a href="https://www.derecho.uba.ar" target="_blank" rel="noopener noreferrer">UBA<span class="sr-only"> (se abre en nueva pestaña)</span></a></li>
+          <li>
+            <a href="https://www.instagram.com/criminologia_peres_deluca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la cátedra (se abre en nueva pestaña)" class="footer-ig">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px;height:16px;vertical-align:middle;">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/mobile-menu.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 </html>
