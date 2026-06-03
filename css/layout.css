@@ -216,7 +216,7 @@
    Dos columnas: identificación izquierda / descripción derecha
    ------------------------------------------------------------ */
 .docentes-lista {
-  margin-top: var(--space-2xl);
+  margin-top: var(--space-lg);
   margin-bottom: var(--space-lg);
 }
 
@@ -225,8 +225,8 @@
   grid-template-columns: 320px 1fr;
   gap: 3rem;
   align-items: start;
-  padding-top: var(--space-3xl);
-  padding-bottom: var(--space-3xl);
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
 }
 
 .docente-identificacion {
@@ -262,7 +262,7 @@
 .section-cierre {
   width: 100%;
   overflow: hidden;
-  margin-top: var(--space-3xl);
+  margin-top: var(--space-lg);
 }
 
 .cierre-imagen {
