@@ -3,11 +3,572 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Programa de Criminología · Cátedra De Luca · Facultad de Derecho UBA. Objetivos, metodología, sistema de evaluación y contenidos por bolilla.">
+  <meta name="author" content="Cátedra De Luca · Departamento de Derecho Penal y Criminología · UBA">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://RicardoDeckard.github.io/criminologia/programa.html">
+
+  <meta property="og:title" content="Programa · Criminología · Cátedra De Luca · UBA">
+  <meta property="og:description" content="Programa de Criminología. Objetivos, metodología y doce bolillas que recorren el pensamiento criminológico desde la demonología medieval hasta la vigilancia electrónica contemporánea.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://RicardoDeckard.github.io/criminologia/programa.html">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Criminología · Cátedra De Luca · UBA">
+
+  <title>Programa · Criminología · Cátedra De Luca · UBA</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    .page-header {
+      padding-top: calc(80px + var(--space-4xl));
+      padding-bottom: var(--space-3xl);
+      border-bottom: var(--line-gris);
+    }
+
+    .page-eyebrow {
+      font-family: var(--font-sans);
+      font-size: var(--type-label);
+      font-weight: 500;
+      letter-spacing: var(--tracking-label);
+      text-transform: uppercase;
+      color: var(--color-dorado);
+      display: block;
+      margin-bottom: var(--space-sm);
+    }
+
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: var(--type-h1);
+      font-weight: 400;
+      line-height: var(--leading-tight);
+      margin-bottom: var(--space-lg);
+    }
+
+    .page-header-meta {
+      font-family: var(--font-sans);
+      font-size: var(--type-label);
+      letter-spacing: var(--tracking-label);
+      text-transform: uppercase;
+      color: var(--color-gris);
+      line-height: 1.8;
+    }
+
+    /* ── Secciones generales ── */
+    .section-programa {
+      padding-top: var(--space-4xl);
+      padding-bottom: var(--space-2xl);
+      border-bottom: var(--line-gris);
+    }
+
+    .section-programa:last-of-type {
+      border-bottom: none;
+    }
+
+    .programa-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: var(--space-4xl);
+      align-items: start;
+    }
+
+    .programa-lateral {
+      position: sticky;
+      top: calc(80px + var(--space-xl));
+    }
+
+    .programa-label {
+      font-family: var(--font-sans);
+      font-size: var(--type-label);
+      font-weight: 500;
+      letter-spacing: var(--tracking-label);
+      text-transform: uppercase;
+      color: var(--color-dorado);
+      display: block;
+      padding-top: 0.35rem;
+    }
+
+    .programa-contenido h2 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: var(--leading-tight);
+      margin-bottom: var(--space-lg);
+    }
+
+    .programa-contenido p {
+      font-family: var(--font-serif);
+      font-size: var(--type-body);
+      line-height: var(--leading-loose);
+      max-width: 38rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .programa-contenido p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Bolillas ── */
+    .section-bolillas {
+      padding-top: var(--space-4xl);
+      padding-bottom: var(--space-4xl);
+    }
+
+    .bolillas-header {
+      margin-bottom: var(--space-3xl);
+    }
+
+    .bolillas-header h2 {
+      font-family: var(--font-serif);
+      font-size: var(--type-h1);
+      font-weight: 400;
+      line-height: var(--leading-tight);
+      margin-bottom: var(--space-sm);
+    }
+
+    .bolillas-header p {
+      font-family: var(--font-serif);
+      font-size: var(--type-body);
+      font-style: italic;
+      color: var(--color-gris);
+      max-width: 36rem;
+    }
+
+    .bolillas-lista {
+      border-top: var(--line-gris);
+    }
+
+    .bolilla-full {
+      border-bottom: var(--line-gris);
+      padding-top: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+      display: grid;
+      grid-template-columns: 6rem 1fr;
+      gap: var(--space-2xl);
+      align-items: start;
+    }
+
+    .bolilla-num-bloque {
+      padding-top: 0.3rem;
+    }
+
+    .bolilla-num {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 400;
+      line-height: 1;
+      color: var(--color-dorado);
+      display: block;
+    }
+
+    .bolilla-num-label {
+      font-family: var(--font-sans);
+      font-size: var(--type-label);
+      font-weight: 500;
+      letter-spacing: var(--tracking-label);
+      text-transform: uppercase;
+      color: var(--color-gris);
+      display: block;
+      margin-top: 0.2rem;
+    }
+
+    .bolilla-cuerpo {}
+
+    .bolilla-titulo {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: var(--leading-tight);
+      margin-bottom: var(--space-md);
+      color: var(--color-negro);
+    }
+
+    .bolilla-texto {
+      font-family: var(--font-serif);
+      font-size: var(--type-body-sm);
+      line-height: var(--leading-loose);
+      color: var(--color-negro);
+      max-width: 38rem;
+      margin-bottom: var(--space-sm);
+    }
+
+    .bolilla-texto:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 767px) {
+      .page-header {
+        padding-top: calc(80px + var(--space-2xl));
+        padding-bottom: var(--space-2xl);
+      }
+
+      .programa-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+      }
+
+      .programa-lateral {
+        position: static;
+      }
+
+      .section-programa {
+        padding-top: var(--space-2xl);
+        padding-bottom: var(--space-xl);
+      }
+
+      .section-bolillas {
+        padding-top: var(--space-2xl);
+        padding-bottom: var(--space-2xl);
+      }
+
+      .bolilla-full {
+        grid-template-columns: 3.5rem 1fr;
+        gap: var(--space-md);
+        padding-top: var(--space-xl);
+        padding-bottom: var(--space-xl);
+      }
+
+      .bolilla-num {
+        font-size: 1.75rem;
+      }
+
+      .bolillas-header {
+        margin-bottom: var(--space-2xl);
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .programa-grid {
+        grid-template-columns: 160px 1fr;
+        gap: var(--space-2xl);
+      }
+    }
+  </style>
 </head>
+
 <body class="nav-dark">
+
+  <nav class="nav-global" id="nav-global" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        Criminología <span class="nav-dot" aria-hidden="true">·</span> Cátedra De Luca
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="programa.html">Programa</a></li>
+        <li><a href="materiales.html">Materiales</a></li>
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="trabajos-practicos.html">Trabajos Prácticos</a></li>
+        <li><a href="docentes.html">Docentes</a></li>
+        <li class="nav-social">
+          <a href="https://www.instagram.com/criminologia_peres_deluca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la cátedra">
+            <svg class="nav-ig-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <button class="nav-menu-toggle" id="nav-menu-toggle" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="nav-menu-dash" aria-hidden="true">—</span>
+      </button>
+    </div>
+    <div class="nav-line" aria-hidden="true"></div>
+  </nav>
+
+  <div class="nav-mobile-overlay" id="nav-mobile-overlay" aria-hidden="true">
+    <div class="nav-mobile-inner">
+      <button class="nav-mobile-close" id="nav-mobile-close" aria-label="Cerrar menú">
+        <span aria-hidden="true">—</span>
+      </button>
+      <ul class="nav-mobile-links" role="list">
+        <li><a href="programa.html">Programa</a></li>
+        <li><a href="materiales.html">Materiales</a></li>
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="trabajos-practicos.html">Trabajos Prácticos</a></li>
+        <li><a href="docentes.html">Docentes</a></li>
+        <li>
+          <a href="https://www.instagram.com/criminologia_peres_deluca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la cátedra" style="display:flex;align-items:center;gap:10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px;" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+            Instagram
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <header class="page-header">
+      <div class="content-area">
+        <span class="page-eyebrow">Criminología · Cátedra De Luca</span>
+        <h1 class="page-title">Programa</h1>
+        <p class="page-header-meta">
+          Departamento de Derecho Penal y Criminología<br>
+          Ciclo Profesional Orientado · Cuatrimestral · 4 puntos<br>
+          Facultad de Derecho · Universidad de Buenos Aires
+        </p>
+      </div>
+    </header>
+
+    <!-- OBJETIVOS GENERALES -->
+    <section class="section-programa" aria-labelledby="obj-generales-heading">
+      <div class="content-area">
+        <div class="programa-grid">
+          <div class="programa-lateral">
+            <span class="programa-label">Objetivos generales</span>
+          </div>
+          <div class="programa-contenido">
+            <p>Brindar al estudiante herramientas teóricas que le permitan problematizar los conceptos de crimen y castigo, de modo de estar en condiciones de poner en crisis la visión naturalizada de estos términos.</p>
+            <p>Ello, a través del estudio de las distintas corrientes criminológicas desde el advenimiento de la modernidad y la consolidación del liberalismo clásico hasta la actualidad: los virajes en torno a la definición del hombre y sus atributos intrínsecos, su relación con la sociedad y con el Estado, y el fundamento y sentido que se le asignó al castigo en los distintos momentos históricos.</p>
+            <p>El análisis se desarrolla desde una perspectiva sociológica que entiende a la criminología como estructura estructurada —en tanto construcción condicionada por las circunstancias sociohistóricas que explican su irrupción y sus cambios— y como estructura estructurante, función que desempeña una vez legitimada socialmente como saber en condiciones de ejercer soberanía y dar cuenta de cierto aspecto de lo social.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJETIVOS ESPECÍFICOS -->
+    <section class="section-programa" aria-labelledby="obj-especificos-heading">
+      <div class="content-area">
+        <div class="programa-grid">
+          <div class="programa-lateral">
+            <span class="programa-label">Objetivos específicos</span>
+          </div>
+          <div class="programa-contenido">
+            <p>Adquirir la capacidad para identificar las características de los discursos criminológicos estudiados durante el curso en manifestaciones cotidianas o expresiones culturales que el estudiante pueda encontrar en el desarrollo de una actividad profesional o en la vida en general.</p>
+            <p>Para ello será indispensable que el estudiante adquiera previamente un manejo ágil de cada uno de esos discursos y pueda distinguir sus características esenciales. También se busca que logre identificar las rupturas y continuidades entre las distintas corrientes y escuelas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METODOLOGÍA -->
+    <section class="section-programa" aria-labelledby="metodologia-heading">
+      <div class="content-area">
+        <div class="programa-grid">
+          <div class="programa-lateral">
+            <span class="programa-label">Metodología</span>
+          </div>
+          <div class="programa-contenido">
+            <p>Las clases serán expositivas y dialogadas, orientadas hacia un debate en el que el docente oficiará de moderador. El desarrollo girará en torno a las lecturas programadas para cada encuentro, cuya forma de abordar será indicada con antelación en función de los objetivos que se persiguen.</p>
+            <p>La cursada consistirá en exposiciones de los docentes sobre la base de la lectura previa de textos seleccionados. Cada clase comenzará con un repaso de la clase anterior y algunas preguntas a los estudiantes para verificar la consolidación de los temas tratados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVALUACIÓN -->
+    <section class="section-programa" aria-labelledby="evaluacion-heading">
+      <div class="content-area">
+        <div class="programa-grid">
+          <div class="programa-lateral">
+            <span class="programa-label">Evaluación</span>
+          </div>
+          <div class="programa-contenido">
+            <p>La evaluación consistirá en dos exámenes parciales domiciliarios en los que los estudiantes deberán aplicar los conocimientos adquiridos al análisis de una expresión cultural —una película, un cuadro, una canción, un grafiti, entre otras posibles.</p>
+            <p>Para realizar los exámenes exitosamente, los estudiantes deberán completar una serie de trabajos prácticos domiciliarios que servirán de práctica para adquirir las habilidades necesarias. Los trabajos prácticos están diseñados para incrementar gradualmente su complejidad.</p>
+            <p>Para promocionar la materia el estudiante deberá aprobar ambos exámenes parciales. La regularidad exige un 75% de asistencia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOLILLAS -->
+    <section class="section-bolillas" aria-label="Contenidos por bolilla">
+      <div class="content-area">
+
+        <div class="bolillas-header">
+          <span class="page-eyebrow">Contenidos</span>
+          <h2>De la demonología medieval a la vigilancia electrónica contemporánea</h2>
+          <p>Doce unidades que recorren el pensamiento criminológico desde sus orígenes hasta sus formas actuales, examinando en cada momento los presupuestos filosóficos y las consecuencias prácticas de cada tradición.</p>
+        </div>
+
+        <div class="bolillas-lista">
+
+          <article class="bolilla-full" id="bolilla-1">
+            <div class="bolilla-num-bloque">
+              <span class="bolilla-num">1</span>
+              <span class="bolilla-num-label">Bolilla</span>
+            </div>
+            <div class="bolilla-cuerpo">
+              <h3 class="bolilla-titulo">Dilemas de la criminología. ¿Criminología como ciencia? Los primeros criminólogos: los demonólogos.</h3>
+              <p class="bolilla-texto">Distintos saberes y técnicas aglutinados bajo un mismo nombre, las cambiantes concepciones acerca de su objeto y método. Costos y beneficios de un saber que no termina de reunir los requisitos para ser considerado ciencia.</p>
+              <p class="bolilla-texto">Nacimiento del poder punitivo. La demonología como primer discurso legitimante del poder punitivo. El <em>Malleus Maleficarum</em>. La Inquisición, la infracción y el secuestro de Dios. La crítica de Spee (<em>Cautio Criminalis</em>) y el discurso crítico. Weyer y el primer intento de los médicos de disputar el discurso sobre la cuestión criminal. La respuesta de Jean Bodin (<em>La démonomanie des sorciers</em>) y la importancia del discurso criminológico en la formación del Estado moderno.</p>
+            </div>
+          </article>
+
+          <article class="bolilla-full" id="bolilla-2">
+            <div class="bolilla-num-bloque">
+              <span class="bolilla-num">2</span>
+              <span class="bolilla-num-label">Bolilla</span>
+            </div>
+            <div class="bolilla-cuerpo">
+              <h3 class="bolilla-titulo">La «Escuela clásica». Racionalidad y utilitarismo.</h3>
+              <p class="bolilla-texto">Entronamiento de la razón autocentrada, racionalidad y utilitarismo como matrices de una determinada concepción del hombre y del castigo. Los cambios en las formas de ejercer el poder punitivo como expresión, en ese ámbito acotado, de un proceso histórico más vasto. Las contradicciones de la época: desde un conocimiento concebido como provisorio, parcial e inacabado se construirán sin embargo las más inconmovibles certezas.</p>
+              <p class="bolilla-texto">La criminología en el discurso político del contractualismo y de los autores iluministas: Hobbes, Locke, Kant, Feuerbach. Pensamiento teológico-político y Estado capitalista. Discurso jurídico-moral y la sociedad como contrato.</p>
+            </div>
+          </article>
+
+          <article class="bolilla-full" id="bolilla-3">
+            <div class="bolilla-num-bloque">
+              <span class="bolilla-num">3</span>
+              <span class="bolilla-num-label">Bolilla</span>
+            </div>
+            <div class="bolilla-cuerpo">
+              <h3 class="bolilla-titulo">Factores que explican las formas específicas que adoptó el castigo bajo el paradigma liberal.</h3>
+              <p class="bolilla-texto">Descripción del contexto histórico y político: el ascenso de la burguesía, las características de las casas de trabajo, la matriz del disciplinarismo. Nacimiento de la prisión y sociedad panóptica. El Estado y una nueva forma de ejercer el poder: el paso de disponer sobre la muerte del súbdito a modelar los hábitos del ciudadano.</p>
+              <p class="bolilla-texto">El delito en el pensamiento de los penalistas liberales y su correspondiente antropología: Beccaria, Romagnosi, Filangieri, Carrara.</p>
+            </div>
+          </article>
+
+          <article class="bolilla-full" id="bolilla-4">
+            <div class="bolilla-num-bloque">
+              <span class="bolilla-num">4</span>
+              <span class="bolilla-num-label">Bolilla</span>
+            </div>
+            <div class="bolilla-cuerpo">
+              <h3 class="bolilla-titulo">El positivismo criminológico.</h3>
+              <p class="bolilla-texto">El positivismo entendido más como una actitud frente al mundo que como la configuración de un método de producir conocimiento. Los hechos como exclusiva materia prima en la construcción de saber. El fetichismo de las ciencias duras y la aspiración de hacer de la sociología una física social; el rol de la psiquiatría. Repercusiones sobre el castigo: los conceptos de «criminal nato», «defensa social», «delito natural» y la idea de «peligrosidad»; la puesta en jaque de la noción de libre albedrío, su reemplazo por el determinismo y el auspicio a las medidas de seguridad.</p>
+              <p class="bolilla-texto">La criminología latinoamericana: razones de su influencia en la Argentina finisecular en el marco del fenómeno conocido como «la Argentina aluvional». Razones de su ocaso como teoría y de la perdurabilidad de sus postulados. El pensamiento de los criminólogos argentinos: Ingenieros, Gómez, Drago. La concepción médico-psiquiátrica y el orden en el cuerpo social. El positivismo y sus versiones médica, sociológica y jurídica.</p>
+            </div>
+          </article>
+
+          <article class="bolilla-full" id="bolilla-5">
+            <div class="bolilla-num-bloque">
+              <span class="bolilla-num">5</span>
+              <span class="bolilla-num-label">Bolilla</span>
+            </div>
+            <div class="bolilla-cuerpo">
+              <h3 class="bolilla-titulo">La irrupción de la sociología para dar cuenta del comportamiento social.</h3>
+              <p class="bolilla-texto">Comte y Spencer. Modelos de sociedad. Durkheim: conceptos de anomia y conciencia colectiva. El funcionalismo. Gabriel Tarde y su visión rizomática: los conceptos de imitación e invención y el rol de la opinión pública.</p>
+            </div>
+          </article>
+
+          <article class="bolilla-full" id="bolilla-6">
+            <div class="bolilla-num-bloque">
+              <span class="bolilla-num">6</span>
+              <span class="bolilla-num-label">Bolilla</span>
+            </div>
+            <div class="bolilla-cuerpo">
+              <h3 class="bolilla-titulo">El discurso sociológico en su vertiente norteamericana: la Escuela de Chicago.</h3>
+              <p class="bolilla-texto">Análisis del contexto: la Gran Guerra y el desplazamiento del centro de producción de conocimiento de Europa a los Estados Unidos. La introducción de la técnica etnográfica y el primer acercamiento entre el estilo periodístico de recabar información y el ámbito de producción del conocimiento social. Los cambios en el objeto de las investigaciones, definidos desde el pragmatismo: cesa la búsqueda de respuestas a los «grandes interrogantes» y el enfoque vira hacia problemáticas acotadas y específicas del espacio urbano. La obra de Robert Park, Clifford Shaw y Henry McKay. El afianzamiento de la sociología como disciplina para explicar la desorganización social.</p>
+              <p class="bolilla-texto">Control social. Comunidad y prevención. El discurso sociológico en las sociedades complejas. El concepto de desviación. Reconstrucción histórica de los sistemas punitivos modernos.</p>
+            </div>
+          </article>
+
+          <article class="bolilla-full" id="bolilla-7">
+            <div class="bolilla-num-bloque">
+              <span class="bolilla-num">7</span>
+              <span class="bolilla-num-label">Bolilla</span>
+            </div>
+            <div class="bolilla-cuerpo">
+              <h3 class="bolilla-titulo">Consolidación y variantes del modelo sociológico: Merton y Sutherland.</h3>
+              <p class="bolilla-texto">Durkheim y el concepto de anomia: el delito como fenómeno socialmente funcional; los conceptos de solidaridad mecánica y orgánica. Merton y la redefinición de la anomia: aspiraciones culturales y caminos socialmente estructurados. Edwin Sutherland: «organización diferencial» y «delito de cuello blanco». Parsons y el estructural-funcionalismo: el sistema como «marco de referencia para la acción» y el concepto de rol para definir expectativas legítimas.</p>
+            </div>
+          </article>
+
+          <article class="bolilla-full" id="bolilla-8">
+            <div class="bolilla-num-bloque">
+              <span class="bolilla-num">8</span>
+              <span class="bolilla-num-label">Bolilla</span>
+            </div>
+            <div class="bolilla-cuerpo">
+              <h3 class="bolilla-titulo">Genocidio y masacres.</h3>
+              <p class="bolilla-texto">Fundamento y críticas del poder punitivo internacional. La función del saber jurídico-penal. Visiones psicoanalíticas y antropológicas. Prevención primaria y prevención secundaria.</p>
+              <p class="bolilla-texto">El debate Feierstein-Zaffaroni. Hannah Arendt. Los muertos que hablan: las masacres y su omisión en la criminología académica. Masacres larvadas. Las técnicas de neutralización de Matza y Sykes. Propuestas para su prevención. Masacres por goteo. Los crímenes de lesa humanidad cometidos durante el terrorismo de Estado: el caso argentino.</p>
+            </div>
+          </article>
+
+          <article class="bolilla-full" id="bolilla-9">
+            <div class="bolilla-num-bloque">
+              <span class="bolilla-num">9</span>
+              <span class="bolilla-num-label">Bolilla</span>
+            </div>
+            <div class="bolilla-cuerpo">
+              <h3 class="bolilla-titulo">Teoría del etiquetamiento, reacción social, poder y desviación.</h3>
+              <p class="bolilla-texto">El interaccionismo simbólico y el «enfoque del etiquetamiento»; la influencia de la «reacción social». El estudio del proceso de creación de normas, definición y poder: empresarios morales y cruzadas morales. La construcción de una identidad desviada. Desviación primaria y secundaria. La valoración desde la perspectiva de los «desviados»; los conceptos de «subcultura», «contracultura» y «cultura dominante». Las nociones de estereotipo y estigma.</p>
+            </div>
+          </article>
+
+          <article class="bolilla-full" id="bolilla-10">
+            <div class="bolilla-num-bloque">
+              <span class="bolilla-num">10</span>
+              <span class="bolilla-num-label">Bolilla</span>
+            </div>
+            <div class="bolilla-cuerpo">
+              <h3 class="bolilla-titulo">Criminología crítica, radical y feminista. La criminología latinoamericana.</h3>
+              <p class="bolilla-texto">El estudio de las variantes del marxismo aplicadas al estudio del delito y las distintas formas de control social: medios de comunicación, instituciones educativas y psiquiátricas, la familia. Exclusión social, cuestión criminal y delito entendido como concepto socialmente construido. El juicio a la cárcel y la necesidad de encontrar formas alternativas de resolver las «situaciones problemáticas». Las propuestas del abolicionismo.</p>
+              <p class="bolilla-texto">Los feminismos criminológicos y sus versiones académicas. Los debates sobre femicidio y despenalización del aborto. ¿Feminismo punitivista? La criminología latinoamericana: Rosa del Olmo, Lolita Aniyar de Castro, Zaffaroni. Los discursos críticos y las justificaciones de la represión penal de principios del siglo XXI. Las funciones materiales e ideológicas de la pena. Los actores de la cuestión penal.</p>
+            </div>
+          </article>
+
+          <article class="bolilla-full" id="bolilla-11">
+            <div class="bolilla-num-bloque">
+              <span class="bolilla-num">11</span>
+              <span class="bolilla-num-label">Bolilla</span>
+            </div>
+            <div class="bolilla-cuerpo">
+              <h3 class="bolilla-titulo">Ocaso del Estado benefactor y las nuevas técnicas de adaptación. Realismo de derecha.</h3>
+              <p class="bolilla-texto">Los efectos del fin del «Estado soberano», la redistribución de funciones para gestionar los efectos del delito y el regreso de la víctima. El prevencionismo como técnica disuasiva y método de mensurar riesgos. El actualismo, los Chicago Boys y el cálculo estadístico aplicado al derecho penal. El <em>acting out</em> y el derecho penal simbólico como formas de adaptación. Las teorías de las ventanas rotas y del <em>three strikes out</em>. La nueva derecha norteamericana.</p>
+            </div>
+          </article>
+
+          <article class="bolilla-full" id="bolilla-12">
+            <div class="bolilla-num-bloque">
+              <span class="bolilla-num">12</span>
+              <span class="bolilla-num-label">Bolilla</span>
+            </div>
+            <div class="bolilla-cuerpo">
+              <h3 class="bolilla-titulo">El delito como fenómeno empírico y como construcción mediática. Medios de comunicación.</h3>
+              <p class="bolilla-texto">El delito convertido en mercancía mediática y sus implicancias en función de los tiempos procesales y la justicia mediática. Los fantasmas de la corrupción y la desprotección. Balance del fenómeno y técnicas para mitigar sus efectos. Delito y sensación de inseguridad: formas de abordar experiencias vinculables aunque no idénticas. El estudio desde la antropología del «sentimiento de inseguridad». La vigilancia electrónica: cámaras de seguridad y vigilancia masiva de comunicaciones electrónicas.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer-global" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img src="img/institucional/logo-footer.png" alt="Facultad de Derecho, Universidad de Buenos Aires" width="72" height="72" loading="lazy" class="footer-escudo">
+      </div>
+      <div class="footer-center">
+        <p class="footer-institution"><em>Facultad de Derecho · Universidad de Buenos Aires</em></p>
+        <p class="footer-copyright">© 2026 · Cátedra De Luca · Departamento de Derecho Penal y Criminología</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <ul role="list">
+          <li><a href="programa.html">Programa</a></li>
+          <li><a href="docentes.html">Docentes</a></li>
+          <li><a href="https://www.derecho.uba.ar" target="_blank" rel="noopener noreferrer">UBA<span class="sr-only"> (se abre en nueva pestaña)</span></a></li>
+          <li>
+            <a href="https://www.instagram.com/criminologia_peres_deluca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la cátedra" class="footer-ig">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px;height:16px;vertical-align:middle;">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/mobile-menu.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 </html>
