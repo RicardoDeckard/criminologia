@@ -525,7 +525,6 @@ button:focus-visible {
   height: 120px;
   margin-bottom: 1.25rem;
   overflow: hidden;
-  border-radius: 0; /* cuadrado, editorial */
 }
 
 .docente-foto {
@@ -535,14 +534,8 @@ button:focus-visible {
   object-position: center top;
   display: block;
   filter: grayscale(100%) sepia(10%) contrast(1.05) brightness(0.94);
-  transition: filter var(--transition-slow);
 }
 
-.docente-foto:hover {
-  filter: grayscale(80%) sepia(12%) contrast(1.05) brightness(0.96);
-}
-
-/* Placeholder para docente sin foto — mismo tamaño, fondo sutil */
 .docente-foto-placeholder {
   background-color: var(--color-gris-claro);
   opacity: 0.4;
