@@ -3,11 +3,338 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clases grabadas de Criminología · Cátedra De Luca · Facultad de Derecho UBA. Videos de las clases teóricas de la materia.">
+  <meta name="author" content="Cátedra De Luca · Departamento de Derecho Penal y Criminología · UBA">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://RicardoDeckard.github.io/criminologia/clases.html">
+
+  <meta property="og:title" content="Clases Grabadas · Criminología · Cátedra De Luca · UBA">
+  <meta property="og:description" content="Videos de las clases teóricas de Criminología, Facultad de Derecho, Universidad de Buenos Aires.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://RicardoDeckard.github.io/criminologia/clases.html">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Criminología · Cátedra De Luca · UBA">
+
+  <title>Clases Grabadas · Criminología · Cátedra De Luca · UBA</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    .page-header {
+      padding-top: calc(80px + var(--space-4xl));
+      padding-bottom: var(--space-3xl);
+      border-bottom: var(--line-gris);
+    }
+
+    .page-eyebrow {
+      font-family: var(--font-sans);
+      font-size: var(--type-label);
+      font-weight: 500;
+      letter-spacing: var(--tracking-label);
+      text-transform: uppercase;
+      color: var(--color-dorado);
+      display: block;
+      margin-bottom: var(--space-sm);
+    }
+
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: var(--type-h1);
+      font-weight: 400;
+      line-height: var(--leading-tight);
+    }
+
+    /* ── Lista de clases ── */
+    .section-clases {
+      padding-top: var(--space-3xl);
+      padding-bottom: var(--space-4xl);
+    }
+
+    .clases-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .clase-entry {
+      border-top: var(--line-gris);
+      padding-top: var(--space-3xl);
+      padding-bottom: var(--space-3xl);
+    }
+
+    .clase-entry:last-child {
+      border-bottom: var(--line-gris);
+    }
+
+    .clase-meta {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .clase-num {
+      font-family: var(--font-sans);
+      font-size: var(--type-label);
+      font-weight: 500;
+      letter-spacing: var(--tracking-label);
+      text-transform: uppercase;
+      color: var(--color-dorado);
+    }
+
+    .clase-titulo {
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: var(--color-negro);
+    }
+
+    /* Contenedor responsive del iframe */
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      padding-bottom: calc(315 / 560 * 100%);
+      max-height: none;
+      height: 0;
+      background-color: var(--color-gris-claro);
+    }
+
+    /* Limitar el padding-bottom al max-width */
+    @supports (aspect-ratio: 16/9) {
+      .video-wrap {
+        padding-bottom: 0;
+        height: auto;
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    .video-wrap iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @supports (aspect-ratio: 16/9) {
+      .video-wrap iframe {
+        position: static;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    /* Nota introductoria */
+    .clases-intro {
+      font-family: var(--font-serif);
+      font-size: var(--type-body);
+      line-height: var(--leading-loose);
+      color: var(--color-gris);
+      max-width: 36rem;
+      margin-bottom: var(--space-3xl);
+    }
+
+    @media (max-width: 767px) {
+      .page-header {
+        padding-top: calc(80px + var(--space-2xl));
+        padding-bottom: var(--space-2xl);
+      }
+
+      .section-clases {
+        padding-top: var(--space-2xl);
+        padding-bottom: var(--space-2xl);
+      }
+
+      .clase-entry {
+        padding-top: var(--space-2xl);
+        padding-bottom: var(--space-2xl);
+      }
+
+      .clase-meta {
+        flex-direction: column;
+        gap: var(--space-xs);
+      }
+
+      .video-wrap {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body class="nav-dark">
+
+  <nav class="nav-global" id="nav-global" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        Criminología <span class="nav-dot" aria-hidden="true">·</span> Cátedra De Luca
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="programa.html">Programa</a></li>
+        <li><a href="materiales.html">Materiales</a></li>
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="trabajos-practicos.html">Trabajos Prácticos</a></li>
+        <li><a href="docentes.html">Docentes</a></li>
+        <li class="nav-social">
+          <a href="https://www.instagram.com/criminologia_peres_deluca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la cátedra">
+            <svg class="nav-ig-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <button class="nav-menu-toggle" id="nav-menu-toggle" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="nav-menu-dash" aria-hidden="true">—</span>
+      </button>
+    </div>
+    <div class="nav-line" aria-hidden="true"></div>
+  </nav>
+
+  <div class="nav-mobile-overlay" id="nav-mobile-overlay" aria-hidden="true">
+    <div class="nav-mobile-inner">
+      <button class="nav-mobile-close" id="nav-mobile-close" aria-label="Cerrar menú">
+        <span aria-hidden="true">—</span>
+      </button>
+      <ul class="nav-mobile-links" role="list">
+        <li><a href="programa.html">Programa</a></li>
+        <li><a href="materiales.html">Materiales</a></li>
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="trabajos-practicos.html">Trabajos Prácticos</a></li>
+        <li><a href="docentes.html">Docentes</a></li>
+        <li>
+          <a href="https://www.instagram.com/criminologia_peres_deluca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la cátedra" style="display:flex;align-items:center;gap:10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px;" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+            Instagram
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <header class="page-header">
+      <div class="content-area">
+        <span class="page-eyebrow">Criminología · 2026</span>
+        <h1 class="page-title">Clases grabadas</h1>
+      </div>
+    </header>
+
+    <section class="section-clases" aria-label="Videos de clases grabadas">
+      <div class="content-area">
+
+        <p class="clases-intro">
+          Videos de las clases teóricas del cuatrimestre. Se irán agregando a medida que estén disponibles.
+        </p>
+
+        <div class="clases-lista">
+
+          <article class="clase-entry" aria-label="Clase 1">
+            <div class="clase-meta">
+              <span class="clase-num">Clase 01</span>
+            </div>
+            <div class="video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/Zj4703Nd52s?si=KWNV2WxMw-UdeujL"
+                title="Criminología · Cátedra De Luca · Clase 01"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+          </article>
+
+          <article class="clase-entry" aria-label="Clase 2">
+            <div class="clase-meta">
+              <span class="clase-num">Clase 02</span>
+            </div>
+            <div class="video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/US2fmvfgwOw?si=1qrccBcw_ZjztusL"
+                title="Criminología · Cátedra De Luca · Clase 02"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+          </article>
+
+          <article class="clase-entry" aria-label="Clase 3">
+            <div class="clase-meta">
+              <span class="clase-num">Clase 03</span>
+            </div>
+            <div class="video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/aupz8zP73bs?si=RnaFb6lMivo63NfZ"
+                title="Criminología · Cátedra De Luca · Clase 03"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer-global" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img
+          src="img/institucional/logo-footer.png"
+          alt="Facultad de Derecho, Universidad de Buenos Aires"
+          width="72"
+          height="72"
+          loading="lazy"
+          class="footer-escudo">
+      </div>
+      <div class="footer-center">
+        <p class="footer-institution">
+          <em>Facultad de Derecho · Universidad de Buenos Aires</em>
+        </p>
+        <p class="footer-copyright">
+          © 2026 · Cátedra De Luca · Departamento de Derecho Penal y Criminología
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <ul role="list">
+          <li><a href="programa.html">Programa</a></li>
+          <li><a href="docentes.html">Docentes</a></li>
+          <li><a href="https://www.derecho.uba.ar" target="_blank" rel="noopener noreferrer">UBA<span class="sr-only"> (se abre en nueva pestaña)</span></a></li>
+          <li>
+            <a href="https://www.instagram.com/criminologia_peres_deluca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la cátedra (se abre en nueva pestaña)" class="footer-ig">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px;height:16px;vertical-align:middle;">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/mobile-menu.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 </html>
