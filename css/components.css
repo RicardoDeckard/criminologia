@@ -444,6 +444,12 @@ button:focus-visible {
     display: block;
   }
 
+  /* Nav brand en móvil: más pequeño, sin truncar */
+  .nav-brand {
+    font-size: 0.8125rem;
+    max-width: 80%;
+  }
+
   /* Ajuste hero */
   .hero-title {
     font-size: var(--type-display-mobile);
