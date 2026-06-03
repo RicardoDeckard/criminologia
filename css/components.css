@@ -450,6 +450,11 @@ button:focus-visible {
     max-width: 80%;
   }
 
+  /* Ocultar " · Cátedra De Luca" en móvil */
+  .nav-brand-sufijo {
+    display: none;
+  }
+
   /* Ajuste hero */
   .hero-title {
     font-size: var(--type-display-mobile);
