@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://RicardoDeckard.github.io/criminologia/sitemap.xml
+Sitemap: https://ricardodeckard.github.io/criminologia/sitemap.xml
