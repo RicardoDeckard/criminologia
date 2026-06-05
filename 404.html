@@ -3,11 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <title>Página no encontrada · Criminología · Cátedra De Luca · UBA</title>
+  <link rel="icon" href="favicon-96x96.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    .error-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      gap: 1.5rem;
+    }
+    .error-num {
+      font-family: var(--font-serif);
+      font-size: 6rem;
+      font-weight: 400;
+      color: var(--color-dorado);
+      line-height: 1;
+    }
+    .error-msg {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--color-negro);
+    }
+    .error-sub {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--color-gris);
+    }
+    .error-link {
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-negro);
+      text-decoration: none;
+      border: 1px solid var(--color-negro);
+      padding: 0.6em 1.2em;
+      margin-top: 0.5rem;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+    .error-link:hover {
+      background-color: var(--color-negro);
+      color: #fff;
+    }
+  </style>
 </head>
 <body class="nav-dark">
+  <div class="error-wrap">
+    <span class="error-num">404</span>
+    <p class="error-msg">La página que buscás no existe.</p>
+    <p class="error-sub">Criminología · Cátedra De Luca · UBA</p>
+    <a href="index.html" class="error-link">Volver al inicio</a>
+  </div>
 </body>
 </html>
