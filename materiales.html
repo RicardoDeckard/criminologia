@@ -6,12 +6,12 @@
   <meta name="description" content="Materiales de estudio de Criminología · Cátedra De Luca · Facultad de Derecho UBA. Textos obligatorios y complementarios organizados por unidad temática.">
   <meta name="author" content="Cátedra De Luca · Departamento de Derecho Penal y Criminología · UBA">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://ricardodeckard.github.io/criminologia/materiales.html">
+  <link rel="canonical" href="https://RicardoDeckard.github.io/criminologia/materiales.html">
 
   <meta property="og:title" content="Materiales · Criminología · Cátedra De Luca · UBA">
   <meta property="og:description" content="Textos obligatorios y complementarios de Criminología, Cátedra De Luca, organizados por unidad temática.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ricardodeckard.github.io/criminologia/materiales.html">
+  <meta property="og:url" content="https://RicardoDeckard.github.io/criminologia/materiales.html">
   <meta property="og:locale" content="es_AR">
   <meta property="og:site_name" content="Criminología · Cátedra De Luca · UBA">
 
@@ -20,12 +20,54 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon-96x96.png" type="image/png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="css/main.css">
 
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Materiales de estudio · Criminología · Cátedra De Luca · UBA",
+      "description": "Textos obligatorios y complementarios organizados por unidad temática para la materia Criminología de la Cátedra De Luca, Facultad de Derecho, Universidad de Buenos Aires.",
+      "url": "https://RicardoDeckard.github.io/criminologia/materiales.html",
+      "numberOfItems": 12,
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Bolilla 1 — Dilemas de la criminología. Los primeros criminólogos: los demonólogos."},
+        {"@type": "ListItem", "position": 2, "name": "Bolilla 2 — La Escuela clásica. Racionalidad y utilitarismo. Textos: Hobbes, Kant, Mari, Swift, Bentham."},
+        {"@type": "ListItem", "position": 3, "name": "Bolilla 3 — Factores que explican las formas específicas del castigo bajo el paradigma liberal."},
+        {"@type": "ListItem", "position": 4, "name": "Bolilla 4 — El positivismo criminológico."},
+        {"@type": "ListItem", "position": 5, "name": "Bolilla 5 — La irrupción de la sociología para dar cuenta del comportamiento social."},
+        {"@type": "ListItem", "position": 6, "name": "Bolilla 6 — El discurso sociológico en su vertiente norteamericana: Escuela de Chicago."},
+        {"@type": "ListItem", "position": 7, "name": "Bolilla 7 — Consolidación y variantes del modelo sociológico: Merton y Sutherland."},
+        {"@type": "ListItem", "position": 8, "name": "Bolilla 8 — Genocidio y masacres."},
+        {"@type": "ListItem", "position": 9, "name": "Bolilla 9 — Teoría del etiquetamiento, reacción social, poder y desviación."},
+        {"@type": "ListItem", "position": 10, "name": "Bolilla 10 — Criminología crítica, radical y feminista. La criminología latinoamericana."},
+        {"@type": "ListItem", "position": 11, "name": "Bolilla 11 — Ocaso del Estado benefactor y las nuevas técnicas de adaptación. Realismo de derecha."},
+        {"@type": "ListItem", "position": 12, "name": "Bolilla 12 — El delito como fenómeno empírico y como construcción mediática."}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Criminología · Cátedra De Luca",
+          "item": "https://RicardoDeckard.github.io/criminologia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Materiales",
+          "item": "https://RicardoDeckard.github.io/criminologia/materiales.html"
+        }
+      ]
+    }
+  ]
+  </script>
+
   <style>
-    /* ── Cabecera ── */
     .page-header {
       padding-top: calc(80px + var(--space-4xl));
       padding-bottom: var(--space-3xl);
@@ -51,58 +93,32 @@
       margin-bottom: var(--space-lg);
     }
 
-    .page-header-meta {
+    .page-subtitle {
       font-family: var(--font-sans);
-      font-size: var(--type-label);
-      letter-spacing: var(--tracking-label);
-      text-transform: uppercase;
+      font-size: var(--type-body-sm);
       color: var(--color-gris);
-      line-height: 1.8;
+      line-height: var(--leading-loose);
     }
 
-    /* ── Instrucciones generales ── */
-    .section-instrucciones {
+    /* ── Sección de indicaciones ── */
+    .section-indicaciones {
       padding-top: var(--space-3xl);
-      padding-bottom: var(--space-3xl);
+      padding-bottom: var(--space-2xl);
       border-bottom: var(--line-gris);
     }
 
-    .instrucciones-grid {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: var(--space-4xl);
-      align-items: start;
-    }
-
-    .instrucciones-label {
-      font-family: var(--font-sans);
-      font-size: var(--type-label);
-      font-weight: 500;
-      letter-spacing: var(--tracking-label);
-      text-transform: uppercase;
-      color: var(--color-dorado);
-      position: sticky;
-      top: calc(80px + var(--space-xl));
-    }
-
-    .instrucciones-cuerpo p {
+    .indicaciones-intro {
       font-family: var(--font-serif);
-      font-size: var(--type-body-sm);
+      font-size: var(--type-body);
       line-height: var(--leading-loose);
       color: var(--color-negro);
-      max-width: 38rem;
-      margin-bottom: var(--space-sm);
+      max-width: 42rem;
+      margin-bottom: var(--space-xl);
     }
 
-    .instrucciones-cuerpo p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* ── Leyenda de badge ── */
-    .leyenda {
+    .leyenda-tipos {
       display: flex;
       gap: var(--space-xl);
-      margin-top: var(--space-lg);
       flex-wrap: wrap;
     }
 
@@ -111,243 +127,201 @@
       align-items: center;
       gap: var(--space-sm);
       font-family: var(--font-sans);
-      font-size: var(--type-label);
-      letter-spacing: var(--tracking-label);
-      text-transform: uppercase;
+      font-size: var(--type-body-sm);
       color: var(--color-gris);
     }
 
     .badge {
       display: inline-block;
-      font-family: var(--font-sans);
-      font-size: 0.6875rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.2em 0.6em;
+      padding: 2px 8px;
       border-radius: 2px;
-      line-height: 1.6;
-      white-space: nowrap;
+      font-size: 0.7rem;
+      font-family: var(--font-sans);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     .badge-obligatorio {
       background-color: var(--color-negro);
-      color: #fff;
+      color: var(--color-crema);
     }
 
     .badge-complementario {
       background-color: transparent;
       color: var(--color-gris);
-      border: 1px solid var(--color-gris);
+      border: 1px solid var(--color-gris-claro);
     }
 
-    /* ── Unidades temáticas ── */
-    .section-unidades {
-      padding-top: var(--space-4xl);
+    /* ── Sección de textos ── */
+    .section-materiales {
+      padding-top: var(--space-3xl);
       padding-bottom: var(--space-4xl);
     }
 
-    /* ── Unidad individual ── */
-    .unidad {
-      border-top: var(--line-gris);
-      padding-top: var(--space-3xl);
-      padding-bottom: var(--space-3xl);
-    }
-
-    .unidad-header {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: var(--space-4xl);
-      align-items: start;
-      margin-bottom: var(--space-2xl);
-    }
-
-    .unidad-num-bloque {
-      padding-top: 0.3rem;
-    }
-
-    .unidad-num {
+    .section-title {
       font-family: var(--font-serif);
-      font-size: 2.5rem;
+      font-size: var(--type-h2);
       font-weight: 400;
-      line-height: 1;
-      color: var(--color-dorado);
-      display: block;
+      margin-bottom: var(--space-3xl);
+      color: var(--color-negro);
     }
 
-    .unidad-num-label {
+    /* ── Bolilla ── */
+    .bolilla {
+      border-top: var(--line-gris);
+      padding-top: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+    }
+
+    .bolilla-header {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+
+    .bolilla-num {
       font-family: var(--font-sans);
       font-size: var(--type-label);
       font-weight: 500;
       letter-spacing: var(--tracking-label);
       text-transform: uppercase;
-      color: var(--color-gris);
-      display: block;
-      margin-top: 0.2rem;
+      color: var(--color-dorado);
+      min-width: 4ch;
+      flex-shrink: 0;
     }
 
-    .unidad-titulo-bloque {}
-
-    .unidad-titulo {
+    .bolilla-titulo {
       font-family: var(--font-serif);
-      font-size: 1.375rem;
-      font-weight: 500;
-      line-height: var(--leading-tight);
-      margin-bottom: var(--space-sm);
+      font-size: 1.25rem;
+      font-weight: 400;
       color: var(--color-negro);
+      line-height: var(--leading-snug);
     }
 
-    .unidad-subtitulo {
+    .bolilla-desc {
       font-family: var(--font-serif);
       font-size: var(--type-body-sm);
-      font-style: italic;
-      color: var(--color-gris);
       line-height: var(--leading-loose);
-      max-width: 38rem;
+      color: var(--color-gris);
+      max-width: 42rem;
+      margin-bottom: var(--space-xl);
     }
 
     /* ── Lista de textos ── */
     .textos-lista {
-      border-top: var(--line-gris);
-    }
-
-    .texto-entry {
-      border-bottom: var(--line-gris);
-      padding-top: var(--space-lg);
-      padding-bottom: var(--space-lg);
-      display: grid;
-      grid-template-columns: 200px 1fr auto;
-      gap: var(--space-2xl);
-      align-items: center;
-    }
-
-    .texto-num-col {
-      /* espacio reservado para alinear con header */
-    }
-
-    .texto-datos {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 0.25rem;
+      gap: var(--space-lg);
+    }
+
+    .texto-item {
+      display: grid;
+      grid-template-columns: 1.5rem 1fr auto;
+      gap: var(--space-md) var(--space-lg);
+      align-items: start;
+    }
+
+    .texto-num {
+      font-family: var(--font-sans);
+      font-size: var(--type-body-sm);
+      color: var(--color-gris);
+      padding-top: 2px;
+    }
+
+    .texto-info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
     }
 
     .texto-autor {
-      font-family: var(--font-sans);
-      font-size: var(--type-label);
-      font-weight: 500;
-      letter-spacing: var(--tracking-label);
-      text-transform: uppercase;
-      color: var(--color-gris);
+      font-family: var(--font-serif);
+      font-size: var(--type-body);
+      font-weight: 400;
+      color: var(--color-negro);
     }
 
     .texto-titulo {
       font-family: var(--font-serif);
-      font-size: 1.0625rem;
+      font-size: var(--type-body);
       font-style: italic;
       color: var(--color-negro);
-      line-height: var(--leading-tight);
     }
 
-    .texto-detalle {
+    .texto-paginas {
       font-family: var(--font-sans);
-      font-size: 0.8125rem;
+      font-size: var(--type-body-sm);
       color: var(--color-gris);
-      letter-spacing: 0.01em;
     }
 
-    .texto-acciones {
+    .texto-actions {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: var(--space-sm);
+      align-items: center;
+      gap: var(--space-md);
+      flex-wrap: wrap;
     }
 
-    /* ── Botón de descarga ── */
     .btn-pdf {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 6px;
       font-family: var(--font-sans);
-      font-size: var(--type-label);
+      font-size: var(--type-body-sm);
       font-weight: 500;
-      letter-spacing: var(--tracking-label);
-      text-transform: uppercase;
       color: var(--color-negro);
       text-decoration: none;
-      border: 1px solid var(--color-negro);
-      padding: 0.5em 0.9em;
-      transition: background-color 0.15s ease, color 0.15s ease;
-      white-space: nowrap;
+      border-bottom: 1px solid var(--color-negro);
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
     }
 
-    .btn-pdf:hover,
-    .btn-pdf:focus-visible {
-      background-color: var(--color-negro);
-      color: #fff;
-      outline: none;
+    .btn-pdf:hover {
+      color: var(--color-dorado);
+      border-color: var(--color-dorado);
     }
 
-    .btn-pdf svg {
-      flex-shrink: 0;
+    /* Estado "sin materiales cargados" */
+    .sin-materiales {
+      font-family: var(--font-sans);
+      font-size: var(--type-body-sm);
+      color: var(--color-gris);
+      font-style: italic;
+      padding: var(--space-lg) 0;
     }
 
-    /* ── Responsive ── */
     @media (max-width: 767px) {
       .page-header {
         padding-top: calc(80px + var(--space-2xl));
         padding-bottom: var(--space-2xl);
       }
 
-      .instrucciones-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-lg);
+      .section-indicaciones,
+      .section-materiales {
+        padding-top: var(--space-2xl);
       }
 
-      .instrucciones-label {
-        position: static;
+      .texto-item {
+        grid-template-columns: 1.5rem 1fr;
+        grid-template-rows: auto auto;
       }
 
-      .unidad-header {
-        grid-template-columns: 1fr;
+      .texto-actions {
+        grid-column: 2;
+      }
+
+      .bolilla-header {
+        flex-direction: column;
+        gap: var(--space-xs);
+      }
+
+      .leyenda-tipos {
+        flex-direction: column;
         gap: var(--space-md);
-      }
-
-      .unidad-num-bloque {
-        display: flex;
-        align-items: baseline;
-        gap: var(--space-sm);
-      }
-
-      .unidad-num {
-        font-size: 1.75rem;
-      }
-
-      .texto-entry {
-        grid-template-columns: 1fr;
-        gap: var(--space-md);
-      }
-
-      .texto-num-col {
-        display: none;
-      }
-
-      .texto-acciones {
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-    }
-
-    @media (min-width: 768px) and (max-width: 1199px) {
-      .instrucciones-grid,
-      .unidad-header {
-        grid-template-columns: 160px 1fr;
-        gap: var(--space-2xl);
-      }
-
-      .texto-entry {
-        grid-template-columns: 160px 1fr auto;
-        gap: var(--space-xl);
       }
     }
   </style>
@@ -418,179 +392,207 @@
       <div class="content-area">
         <span class="page-eyebrow">Criminología · Cátedra De Luca</span>
         <h1 class="page-title">Materiales</h1>
-        <p class="page-header-meta">
+        <p class="page-subtitle">
           Textos organizados por unidad temática<br>
           Departamento de Derecho Penal y Criminología · Facultad de Derecho · UBA
         </p>
       </div>
     </header>
 
-    <!-- INSTRUCCIONES -->
-    <section class="section-instrucciones" aria-labelledby="instrucciones-heading">
+    <section class="section-indicaciones" aria-label="Indicaciones de lectura">
       <div class="content-area">
-        <div class="instrucciones-grid">
-          <div>
-            <span class="instrucciones-label" id="instrucciones-heading">Indicaciones</span>
+        <p class="indicaciones-intro">
+          Los textos están organizados por unidad temática y clasificados como obligatorios o complementarios. La lectura de los textos obligatorios es condición necesaria para el seguimiento de las clases y la preparación de los trabajos prácticos.
+        </p>
+        <div class="leyenda-tipos" aria-label="Referencias de tipo de texto">
+          <div class="leyenda-item">
+            <span class="badge badge-obligatorio">Obligatorio</span>
+            <span>Lectura requerida</span>
           </div>
-          <div class="instrucciones-cuerpo">
-            <p>Los textos están organizados por unidad temática y clasificados como obligatorios o complementarios. La lectura de los textos obligatorios es condición necesaria para el seguimiento de las clases y la preparación de los trabajos prácticos.</p>
-            <p>Los textos complementarios amplían el desarrollo de la unidad y su lectura es recomendada para una comprensión más profunda de los temas.</p>
-            <div class="leyenda" aria-label="Referencias">
-              <span class="leyenda-item"><span class="badge badge-obligatorio">Obligatorio</span> Lectura requerida</span>
-              <span class="leyenda-item"><span class="badge badge-complementario">Complementario</span> Lectura recomendada</span>
-            </div>
+          <div class="leyenda-item">
+            <span class="badge badge-complementario">Complementario</span>
+            <span>Lectura recomendada</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- UNIDADES -->
-    <section class="section-unidades" aria-labelledby="unidades-heading">
+    <section class="section-materiales" aria-label="Textos por unidad">
       <div class="content-area">
-        <h2 class="sr-only" id="unidades-heading">Textos por unidad</h2>
 
-        <!-- ══════════════════════════════════════════
-             UNIDAD 2 — La escuela clásica
-             ══════════════════════════════════════════ -->
-        <article class="unidad" id="unidad-2">
+        <h2 class="section-title">Textos por unidad</h2>
 
-          <div class="unidad-header">
-            <div class="unidad-num-bloque">
-              <span class="unidad-num">2</span>
-              <span class="unidad-num-label">Unidad</span>
-            </div>
-            <div class="unidad-titulo-bloque">
-              <h3 class="unidad-titulo">La «Escuela clásica». Racionalidad y utilitarismo.</h3>
-              <p class="unidad-subtitulo">Entronamiento de la razón autocentrada, racionalidad y utilitarismo como matrices de una determinada concepción del hombre y del castigo. La criminología en el discurso político del contractualismo y de los autores iluministas.</p>
-            </div>
+        <!-- ── BOLILLA 1 ── -->
+        <div class="bolilla" id="bolilla-1">
+          <div class="bolilla-header">
+            <span class="bolilla-num">1 Unidad</span>
+            <h3 class="bolilla-titulo">Dilemas de la criminología. ¿Criminología como ciencia? Los primeros criminólogos: los demonólogos.</h3>
           </div>
+          <p class="bolilla-desc">Nacimiento del poder punitivo. La demonología como primer discurso legitimante. El <em>Malleus Maleficarum</em>. La Inquisición y el secuestro de Dios. La crítica de Spee (<em>Cautio Criminalis</em>). Weyer y Jean Bodin.</p>
+          <p class="sin-materiales">Los materiales de esta unidad se publicarán próximamente.</p>
+        </div>
 
-          <ol class="textos-lista" aria-label="Textos de la Unidad 2">
-
-            <!-- Texto 1: Hobbes -->
-            <li class="texto-entry">
-              <div class="texto-num-col" aria-hidden="true"></div>
-              <div class="texto-datos">
+        <!-- ── BOLILLA 2 ── -->
+        <div class="bolilla" id="bolilla-2">
+          <div class="bolilla-header">
+            <span class="bolilla-num">2 Unidad</span>
+            <h3 class="bolilla-titulo">La «Escuela clásica». Racionalidad y utilitarismo.</h3>
+          </div>
+          <p class="bolilla-desc">Entronamiento de la razón autocentrada, racionalidad y utilitarismo como matrices de una determinada concepción del hombre y del castigo. La criminología en el discurso político del contractualismo y de los autores iluministas.</p>
+          <ol class="textos-lista" aria-label="Textos de la unidad 2">
+            <li class="texto-item">
+              <span class="texto-num">1.</span>
+              <div class="texto-info">
                 <span class="texto-autor">Hobbes, Thomas</span>
                 <span class="texto-titulo">El Leviatán</span>
-                <span class="texto-detalle">Selección de capítulos · PDF</span>
+                <span class="texto-paginas">Selección de capítulos · PDF</span>
               </div>
-              <div class="texto-acciones">
+              <div class="texto-actions">
                 <span class="badge badge-obligatorio">Obligatorio</span>
-                <a class="btn-pdf"
-                   href="https://drive.google.com/file/d/1shAetKKgLUKOrTEYsGq17YKjSe3nHk7E/view"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Abrir PDF: El Leviatán, Hobbes">
-                  <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M1 9.5V12H12V9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                    <path d="M6.5 1V9M6.5 9L3.5 6M6.5 9L9.5 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  Ver PDF
-                </a>
+                <a href="https://drive.google.com/file/d/1shAetKKgLUKOrTEYsGq17YKjSe3nHk7E/view" target="_blank" rel="noopener noreferrer" class="btn-pdf">Ver PDF</a>
               </div>
             </li>
-
-            <!-- Texto 2: Kant -->
-            <li class="texto-entry">
-              <div class="texto-num-col" aria-hidden="true"></div>
-              <div class="texto-datos">
+            <li class="texto-item">
+              <span class="texto-num">2.</span>
+              <div class="texto-info">
                 <span class="texto-autor">Kant, Immanuel</span>
                 <span class="texto-titulo">La metafísica de las costumbres</span>
-                <span class="texto-detalle">pp. 165–174 · PDF</span>
+                <span class="texto-paginas">pp. 165–174 · PDF</span>
               </div>
-              <div class="texto-acciones">
+              <div class="texto-actions">
                 <span class="badge badge-obligatorio">Obligatorio</span>
-                <a class="btn-pdf"
-                   href="https://drive.google.com/file/d/1ExQSvJbzJsu8yzNUMsoW2FC7y9ytTSEw/view"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Abrir PDF: La metafísica de las costumbres, Kant">
-                  <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M1 9.5V12H12V9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                    <path d="M6.5 1V9M6.5 9L3.5 6M6.5 9L9.5 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  Ver PDF
-                </a>
+                <a href="https://drive.google.com/file/d/1ExQSvJbzJsu8yzNUMsoW2FC7y9ytTSEw/view" target="_blank" rel="noopener noreferrer" class="btn-pdf">Ver PDF</a>
               </div>
             </li>
-
-            <!-- Texto 3: Mari -->
-            <li class="texto-entry">
-              <div class="texto-num-col" aria-hidden="true"></div>
-              <div class="texto-datos">
+            <li class="texto-item">
+              <span class="texto-num">3.</span>
+              <div class="texto-info">
                 <span class="texto-autor">Mari, Enrique Eduardo</span>
                 <span class="texto-titulo">La problemática del castigo</span>
-                <span class="texto-detalle">pp. 131–203 · PDF</span>
+                <span class="texto-paginas">pp. 131–203 · PDF</span>
               </div>
-              <div class="texto-acciones">
+              <div class="texto-actions">
                 <span class="badge badge-obligatorio">Obligatorio</span>
-                <a class="btn-pdf"
-                   href="https://drive.google.com/file/d/1KEpBuoXzwfkSDd7-SMQbhCsKRrHXLiui/view"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Abrir PDF: La problemática del castigo, Mari">
-                  <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M1 9.5V12H12V9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                    <path d="M6.5 1V9M6.5 9L3.5 6M6.5 9L9.5 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  Ver PDF
-                </a>
+                <a href="https://drive.google.com/file/d/1KEpBuoXzwfkSDd7-SMQbhCsKRrHXLiui/view" target="_blank" rel="noopener noreferrer" class="btn-pdf">Ver PDF</a>
               </div>
             </li>
-
-            <!-- Texto 4: Swift — complementario -->
-            <li class="texto-entry">
-              <div class="texto-num-col" aria-hidden="true"></div>
-              <div class="texto-datos">
+            <li class="texto-item">
+              <span class="texto-num">4.</span>
+              <div class="texto-info">
                 <span class="texto-autor">Swift, Jonathan</span>
                 <span class="texto-titulo">Los viajes de Gulliver</span>
-                <span class="texto-detalle">Tercera parte · PDF</span>
+                <span class="texto-paginas">Tercera parte · PDF</span>
               </div>
-              <div class="texto-acciones">
+              <div class="texto-actions">
                 <span class="badge badge-complementario">Complementario</span>
-                <a class="btn-pdf"
-                   href="https://drive.google.com/file/d/1e3T053MuIYtAnE6YMnMNhl1ao9F9gbaq/view"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Abrir PDF: Los viajes de Gulliver, Swift">
-                  <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M1 9.5V12H12V9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                    <path d="M6.5 1V9M6.5 9L3.5 6M6.5 9L9.5 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  Ver PDF
-                </a>
+                <a href="https://drive.google.com/file/d/1e3T053MuIYtAnE6YMnMNhl1ao9F9gbaq/view" target="_blank" rel="noopener noreferrer" class="btn-pdf">Ver PDF</a>
               </div>
             </li>
-
-            <!-- Texto 5: Bentham — complementario -->
-            <li class="texto-entry">
-              <div class="texto-num-col" aria-hidden="true"></div>
-              <div class="texto-datos">
+            <li class="texto-item">
+              <span class="texto-num">5.</span>
+              <div class="texto-info">
                 <span class="texto-autor">Bentham, Jeremy</span>
                 <span class="texto-titulo">El panóptico</span>
-                <span class="texto-detalle">PDF</span>
+                <span class="texto-paginas">PDF</span>
               </div>
-              <div class="texto-acciones">
+              <div class="texto-actions">
                 <span class="badge badge-complementario">Complementario</span>
-                <a class="btn-pdf"
-                   href="https://drive.google.com/file/d/1VTzM3i-aKYyVp_cQFpYNHQlDBU-MK0Qy/view"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Abrir PDF: El panóptico, Bentham">
-                  <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M1 9.5V12H12V9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                    <path d="M6.5 1V9M6.5 9L3.5 6M6.5 9L9.5 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  Ver PDF
-                </a>
+                <a href="https://drive.google.com/file/d/1VTzM3i-aKYyVp_cQFpYNHQlDBU-MK0Qy/view" target="_blank" rel="noopener noreferrer" class="btn-pdf">Ver PDF</a>
               </div>
             </li>
-
           </ol>
+        </div>
 
-        </article>
-        <!-- FIN UNIDAD 2 -->
+        <!-- ── BOLILLAS 3–12: placeholders con anchor IDs ── -->
+        <div class="bolilla" id="bolilla-3">
+          <div class="bolilla-header">
+            <span class="bolilla-num">3 Unidad</span>
+            <h3 class="bolilla-titulo">Factores que explican las formas específicas que adoptó el castigo bajo el paradigma liberal.</h3>
+          </div>
+          <p class="bolilla-desc">Ascenso de la burguesía, casas de trabajo, disciplinarismo. Nacimiento de la prisión y sociedad panóptica. Beccaria, Romagnosi, Filangieri, Carrara.</p>
+          <p class="sin-materiales">Los materiales de esta unidad se publicarán próximamente.</p>
+        </div>
+
+        <div class="bolilla" id="bolilla-4">
+          <div class="bolilla-header">
+            <span class="bolilla-num">4 Unidad</span>
+            <h3 class="bolilla-titulo">El positivismo criminológico.</h3>
+          </div>
+          <p class="bolilla-desc">El positivismo como actitud frente al mundo. Criminal nato, defensa social, peligrosidad. La criminología latinoamericana: Ingenieros, Gómez, Drago.</p>
+          <p class="sin-materiales">Los materiales de esta unidad se publicarán próximamente.</p>
+        </div>
+
+        <div class="bolilla" id="bolilla-5">
+          <div class="bolilla-header">
+            <span class="bolilla-num">5 Unidad</span>
+            <h3 class="bolilla-titulo">La irrupción de la sociología para dar cuenta del comportamiento social.</h3>
+          </div>
+          <p class="bolilla-desc">Comte y Spencer. Durkheim: anomia y conciencia colectiva. El funcionalismo. Gabriel Tarde: imitación e invención.</p>
+          <p class="sin-materiales">Los materiales de esta unidad se publicarán próximamente.</p>
+        </div>
+
+        <div class="bolilla" id="bolilla-6">
+          <div class="bolilla-header">
+            <span class="bolilla-num">6 Unidad</span>
+            <h3 class="bolilla-titulo">El discurso sociológico en su vertiente norteamericana: la Escuela de Chicago.</h3>
+          </div>
+          <p class="bolilla-desc">La Gran Guerra y el desplazamiento del centro de producción de conocimiento. Robert Park, Clifford Shaw y Henry McKay. Desorganización social y control social.</p>
+          <p class="sin-materiales">Los materiales de esta unidad se publicarán próximamente.</p>
+        </div>
+
+        <div class="bolilla" id="bolilla-7">
+          <div class="bolilla-header">
+            <span class="bolilla-num">7 Unidad</span>
+            <h3 class="bolilla-titulo">Consolidación y variantes del modelo sociológico: Merton y Sutherland.</h3>
+          </div>
+          <p class="bolilla-desc">Durkheim y Merton: anomia y aspiraciones culturales. Edwin Sutherland: organización diferencial y delito de cuello blanco. Parsons y el estructural-funcionalismo.</p>
+          <p class="sin-materiales">Los materiales de esta unidad se publicarán próximamente.</p>
+        </div>
+
+        <div class="bolilla" id="bolilla-8">
+          <div class="bolilla-header">
+            <span class="bolilla-num">8 Unidad</span>
+            <h3 class="bolilla-titulo">Genocidio y masacres.</h3>
+          </div>
+          <p class="bolilla-desc">El debate Feierstein-Zaffaroni. Hannah Arendt. Las masacres y su omisión en la criminología académica. Técnicas de neutralización de Matza y Sykes. El caso argentino.</p>
+          <p class="sin-materiales">Los materiales de esta unidad se publicarán próximamente.</p>
+        </div>
+
+        <div class="bolilla" id="bolilla-9">
+          <div class="bolilla-header">
+            <span class="bolilla-num">9 Unidad</span>
+            <h3 class="bolilla-titulo">Teoría del etiquetamiento, reacción social, poder y desviación.</h3>
+          </div>
+          <p class="bolilla-desc">Interaccionismo simbólico y etiquetamiento. Empresarios morales y cruzadas morales. Construcción de la identidad desviada. Estigma y estereotipo.</p>
+          <p class="sin-materiales">Los materiales de esta unidad se publicarán próximamente.</p>
+        </div>
+
+        <div class="bolilla" id="bolilla-10">
+          <div class="bolilla-header">
+            <span class="bolilla-num">10 Unidad</span>
+            <h3 class="bolilla-titulo">Criminología crítica, radical y feminista. La criminología latinoamericana.</h3>
+          </div>
+          <p class="bolilla-desc">Marxismo aplicado al delito y al control social. Abolicionismo. Feminismos criminológicos. Rosa del Olmo, Lolita Aniyar de Castro, Zaffaroni.</p>
+          <p class="sin-materiales">Los materiales de esta unidad se publicarán próximamente.</p>
+        </div>
+
+        <div class="bolilla" id="bolilla-11">
+          <div class="bolilla-header">
+            <span class="bolilla-num">11 Unidad</span>
+            <h3 class="bolilla-titulo">Ocaso del Estado benefactor y las nuevas técnicas de adaptación. Realismo de derecha.</h3>
+          </div>
+          <p class="bolilla-desc">Fin del Estado soberano, redistribución de funciones, regreso de la víctima. Prevencionismo, actualismo, Chicago Boys. Teorías de las ventanas rotas y del three strikes out.</p>
+          <p class="sin-materiales">Los materiales de esta unidad se publicarán próximamente.</p>
+        </div>
+
+        <div class="bolilla" id="bolilla-12">
+          <div class="bolilla-header">
+            <span class="bolilla-num">12 Unidad</span>
+            <h3 class="bolilla-titulo">El delito como fenómeno empírico y como construcción mediática.</h3>
+          </div>
+          <p class="bolilla-desc">El delito convertido en mercancía mediática. Justicia mediática. Delito y sensación de inseguridad. La vigilancia electrónica: cámaras y vigilancia masiva de comunicaciones.</p>
+          <p class="sin-materiales">Los materiales de esta unidad se publicarán próximamente.</p>
+        </div>
 
       </div>
     </section>
@@ -600,11 +602,21 @@
   <footer class="footer-global" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-left">
-        <img src="img/institucional/logo-footer.png" alt="Facultad de Derecho, Universidad de Buenos Aires" width="72" height="72" loading="lazy" class="footer-escudo">
+        <img
+          src="img/institucional/logo-footer.png"
+          alt="Facultad de Derecho, Universidad de Buenos Aires"
+          width="72"
+          height="72"
+          loading="lazy"
+          class="footer-escudo">
       </div>
       <div class="footer-center">
-        <p class="footer-institution"><em>Facultad de Derecho · Universidad de Buenos Aires</em></p>
-        <p class="footer-copyright">© 2026 · Cátedra De Luca · Departamento de Derecho Penal y Criminología</p>
+        <p class="footer-institution">
+          <em>Facultad de Derecho · Universidad de Buenos Aires</em>
+        </p>
+        <p class="footer-copyright">
+          © 2026 · Cátedra De Luca · Departamento de Derecho Penal y Criminología
+        </p>
       </div>
       <nav class="footer-nav" aria-label="Navegación del pie de página">
         <ul role="list">
@@ -612,7 +624,7 @@
           <li><a href="docentes.html">Docentes</a></li>
           <li><a href="https://www.derecho.uba.ar" target="_blank" rel="noopener noreferrer">UBA<span class="sr-only"> (se abre en nueva pestaña)</span></a></li>
           <li>
-            <a href="https://www.instagram.com/criminologia_peres_deluca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la cátedra" class="footer-ig">
+            <a href="https://www.instagram.com/criminologia_peres_deluca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la cátedra (se abre en nueva pestaña)" class="footer-ig">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px;height:16px;vertical-align:middle;">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                 <circle cx="12" cy="12" r="4"/>
