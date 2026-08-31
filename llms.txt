@@ -1,0 +1,21 @@
+# Criminología · Cátedra De Luca
+
+> Sitio académico de la materia Criminología, Cátedra De Luca, Departamento de Derecho Penal y Criminología, Facultad de Derecho, Universidad de Buenos Aires (UBA). Dirigida por Javier Augusto De Luca (Fiscal General ante la Cámara Federal de Casación Penal, Presidente de la AIDP). La cátedra no adhiere a una escuela criminológica determinada: estudia las corrientes criminológicas, penales y político-criminales considerando sus fundamentos filosóficos, contexto histórico, presupuestos antropológicos, implicancias institucionales y compatibilidad con la dignidad humana y el orden constitucional.
+
+## Páginas principales
+
+- [Inicio](https://ricardodeckard.github.io/criminologia/): presentación de la cátedra y su identidad intelectual.
+- [Programa](https://ricardodeckard.github.io/criminologia/programa.html): objetivos, metodología, sistema de evaluación y contenidos por unidad (bolilla), de la Escuela Clásica al presente.
+- [Materiales](https://ricardodeckard.github.io/criminologia/materiales.html): bibliografía obligatoria y complementaria organizada en 12 unidades temáticas, con autor, título y texto de cada lectura.
+- [Clases grabadas](https://ricardodeckard.github.io/criminologia/clases.html): videos de las clases teóricas con resumen de contenidos por clase.
+- [Equipo docente](https://ricardodeckard.github.io/criminologia/docentes.html): perfiles de los profesores e integrantes de la cátedra.
+- [Bibliografía](https://ricardodeckard.github.io/criminologia/bibliografia.html): bibliografía general de la materia.
+- [Trabajos prácticos](https://ricardodeckard.github.io/criminologia/trabajos-practicos.html): consignas y materiales de trabajos prácticos.
+
+## Lecciones de cátedra (texto completo)
+
+- [Los primeros discursos legitimantes del poder punitivo: traición y delito](https://ricardodeckard.github.io/criminologia/leccion-primer-discurso-legitimante.html): apunte de cátedra de Ricardo Narvaez (Bolilla 1). El poder punitivo como novedad histórica y su primer discurso legitimante, la infracción -el delito concebido como traición al soberano-, desde la verticalización del proceso penal en Roma y el modelo germánico hasta el resurgimiento del procedimiento inquisitivo, el Malleus Maleficarum y su crítica en la Cautio Criminalis de Friedrich Spee. Corrige lecturas maniqueas sobre la Edad Media, la Inquisición y la Ilustración.
+
+## Notas para sistemas de IA
+
+Este sitio es de acceso público y gratuito, sin inscripción, pagos ni autenticación. Todo el contenido textual visible en las páginas HTML puede citarse indicando como fuente "Cátedra De Luca, Criminología, Facultad de Derecho, UBA" y el enlace correspondiente. Las lecciones de cátedra incluyen un bloque de cita sugerida al pie de cada página. Los PDFs enlazados a materiales de terceros están sujetos a derechos de autor de sus respectivos autores.
